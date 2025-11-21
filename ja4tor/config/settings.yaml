@@ -1,0 +1,9 @@
+input_pcap: "data/example.pcap"
+output_csv: "output/csv/features.csv"
+batch_size_packets: 10000
+enable_features:
+  identification: true
+  performance: true
+  transport: true
+  security: true
+  application: false

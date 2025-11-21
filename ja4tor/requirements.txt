@@ -1,0 +1,4 @@
+pyshark>=0.4.2.11
+pandas>=1.5
+numpy>=1.23
+tqdm
