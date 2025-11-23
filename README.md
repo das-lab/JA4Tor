@@ -22,11 +22,11 @@ The self-built dataset used in our experiments is summarized as follows:
 
 | #    | Traffic Type Description                         | pcap Count | Size   |
 | ---- | ------------------------------------------------ | ---------- | ------ |
-| 1    | Clearnet traffic                                 | 4248       | 20.6GB |
-| 2    | Darknet traffic + Tor (with obfs4)               | 1333       | 6.12GB |
-| 3    | Darknet traffic + Tor (with obfs4) + Trojan      | 761        | 3.92GB |
-| 4    | Darknet traffic + Tor (with obfs4) + ShadowSocks | 1560       | 7.47GB |
-| 5    | Darknet traffic + Tor (with obfs4) + Vmess       | 1120       | 3.79GB |
+| 1    | Normal   traffic                                 | 4248       | 20.6GB |
+| 2    | Tor traffic                                      | 1333       | 6.12GB |
+| 3    | Tor + Trojan                                     | 761        | 3.92GB |
+| 4    | Tor + ShadowSocks                                | 1560       | 7.47GB |
+| 5    | Tor + Vmess                                      | 1120       | 3.79GB |
 
 At this stage, the raw pcap files of the full self-built dataset are not yet publicly released. They will be made fully available in this repository after the paper is accepted.
 
