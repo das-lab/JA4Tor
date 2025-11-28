@@ -1,6 +1,6 @@
 # JA4Tor: Interpretable Multi-Dimensional Framework for Classifying Covert Encrypted Tunnels
 
-This repository contains the official implementation of the paper **“JA4Tor: Interpretable Multi-Dimensional Framework for Classifying Covert Encrypted Tunnels”**, which is currently under review (DSN 2026).  
+This repository contains the official implementation of the paper **“JA4Tor: Multi-Dimensional Interpretable Classification of Covert Encrypted Tunnels”**, which is currently under review (DSN 2026).  
 
 Upon acceptance, we will fully open-source the complete codebase and datasets and provide more detailed documentation and reproduction instructions.
 
