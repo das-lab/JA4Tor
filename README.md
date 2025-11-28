@@ -22,7 +22,7 @@ The self-built dataset used in our experiments is summarized as follows:
 
 | #    | Traffic Type Description                         | pcap Count | Size   |
 | ---- | ------------------------------------------------ | ---------- | ------ |
-| 1    | Normal   traffic                                 | 4248       | 20.6GB |
+| 1    | NonTor   traffic                                 | 4248       | 20.6GB |
 | 2    | Tor traffic                                      | 1333       | 6.12GB |
 | 3    | Tor + Trojan                                     | 761        | 3.92GB |
 | 4    | Tor + ShadowSocks                                | 1560       | 7.47GB |
