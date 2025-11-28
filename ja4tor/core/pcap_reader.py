@@ -7,9 +7,7 @@ from logger import logger
 
 DEFAULT_TSHARK_PATHS = [
     os.environ.get("TSHARK_PATH"),
-    r"E:\Wireshark\tshark.exe",
-    r"C:\Program Files\Wireshark\tshark.exe",
-    r"C:\Program Files (x86)\Wireshark\tshark.exe",
+    # wireshark PATH
 ]
 
 
