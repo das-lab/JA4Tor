@@ -1,4 +1,4 @@
-# JA4Tor: Interpretable Multi-Dimensional Framework for Classifying Covert Encrypted Tunnels
+# JA4TOR: Exposing Tor-over-Proxy Tunnels via Protocol-Constrained Behavioral Dynamics
 
 This repository contains the official implementation of the paper **“JA4TOR: Exposing Tor-over-Proxy Tunnels via Protocol-Constrained Behavioral
 Dynamics”**, which is currently under review.  
