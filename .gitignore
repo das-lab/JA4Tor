@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+results/
+artifact_audit/
+artifact_sii_audit.pdf

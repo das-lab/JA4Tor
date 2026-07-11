@@ -19,13 +19,20 @@ def ip_to_int(ip_str: str) -> int:
         return 0
 
 
-def preprocess_data(df: pd.DataFrame) -> pd.DataFrame:
-    if "Src IP" in df.columns:
+def preprocess_data(df: pd.DataFrame, include_sii: bool = False) -> pd.DataFrame:
+    """Prepare classifier inputs.
+
+    IP addresses and ports are sample-identifying information (SII). They are
+    excluded by default and can be restored only for legacy reproduction.
+    """
+    if include_sii and "Src IP" in df.columns:
         df["Src IP"] = df["Src IP"].apply(ip_to_int)
-    if "Dst IP" in df.columns:
+    if include_sii and "Dst IP" in df.columns:
         df["Dst IP"] = df["Dst IP"].apply(ip_to_int)
 
     cols_to_drop = ["Flow ID", "Timestamp", "Protocol"]
+    if not include_sii:
+        cols_to_drop.extend(["Src IP", "Dst IP", "Src Port", "Dst Port"])
     df = df.drop(columns=[c for c in cols_to_drop if c in df.columns], errors="ignore")
 
     df = df.fillna(0)
@@ -211,18 +218,23 @@ def run_once(
     n_estimators: int,
     random_state: int,
     logger: logging.Logger,
+    include_sii: bool = False,
 ) -> Dict[str, object]:
-    train_df = pd.read_csv(train_csv)
-    test_df = pd.read_csv(test_csv)
+    train_df = pd.read_csv(train_csv, low_memory=False)
+    test_df = pd.read_csv(test_csv, low_memory=False)
 
     if "traffic_type" not in train_df.columns or "traffic_type" not in test_df.columns:
         raise ValueError("Missing traffic_type column in train or test CSV")
 
     y_train = train_df["traffic_type"]
-    X_train = preprocess_data(train_df.drop("traffic_type", axis=1))
+    X_train = preprocess_data(
+        train_df.drop("traffic_type", axis=1), include_sii=include_sii
+    )
 
     y_test = test_df["traffic_type"]
-    X_test = preprocess_data(test_df.drop("traffic_type", axis=1))
+    X_test = preprocess_data(
+        test_df.drop("traffic_type", axis=1), include_sii=include_sii
+    )
 
     common_cols = X_train.columns.intersection(X_test.columns)
     X_train = X_train[common_cols]
@@ -244,6 +256,7 @@ def run_once(
 
     feat_info = meta["features"]
     result = {
+        "include_sii": include_sii,
         "alpha": alpha,
         "n_bins": n_bins,
         "min_k": min_k,
@@ -255,7 +268,7 @@ def run_once(
     }
 
     logger.info(
-        f"alpha={alpha} n_bins={n_bins} min_k={min_k} "
+        f"include_sii={include_sii} alpha={alpha} n_bins={n_bins} min_k={min_k} "
         f"final_features={result['n_features_final']} "
         f"f1_macro={result['f1_macro']:.6f} f1_weighted={result['f1_weighted']:.6f}"
     )
@@ -272,6 +285,11 @@ def main():
     parser.add_argument("--n-estimators", type=int, default=100)
     parser.add_argument("--random-state", type=int, default=0)
     parser.add_argument("--log-file", type=str, default="results/run_one.log")
+    parser.add_argument(
+        "--include-sii",
+        action="store_true",
+        help="Legacy reproduction only: include source/destination IP addresses and ports",
+    )
     args = parser.parse_args()
 
     train_csv = Path(args.train)
@@ -299,6 +317,7 @@ def main():
         n_estimators=args.n_estimators,
         random_state=args.random_state,
         logger=logger,
+        include_sii=args.include_sii,
     )
 
 

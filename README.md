@@ -1,9 +1,6 @@
 # JA4TOR: Exposing Tor-over-Proxy Tunnels via Protocol-Constrained Behavioral Dynamics
 
-This repository contains the official implementation of the paper **“JA4TOR: Exposing Tor-over-Proxy Tunnels via Protocol-Constrained Behavioral
-Dynamics”**, which is currently under review.  
-
-Upon acceptance, we will fully open-source the complete codebase and datasets and provide more detailed documentation and reproduction instructions.
+This repository contains the research artifact for **“JA4TOR: Exposing Tor-over-Proxy Tunnels via Protocol-Constrained Behavioral Dynamics.”** The repository currently supports feature extraction, row-level classifier reproduction, and shortcut-feature auditing. It does not yet contain the raw pcap inventory or the group metadata needed to verify pcap/session/run-disjoint evaluation.
 
 ## Project Structure
 
@@ -29,7 +26,9 @@ The self-built dataset used in our experiments is summarized as follows:
 | 4    | Tor - ShadowSocks        | 1560       | 7.47GB |
 | 5    | Tor - Vmess              | 1120       | 3.79GB |
 
-At this stage, the raw pcap files of the full self-built dataset are not yet publicly released. They will be made fully available in this repository after the paper is accepted.
+The documented inventory contains **9,022 pcaps (41.90 GB)** in total.
+
+At this stage, the raw pcap files are not publicly released. Until the raw captures and row-level provenance manifest are added, results from the derived CSV files should be interpreted as flow-row reproduction rather than proof of group-independent generalization.
 
 ## Provided Data in This Repository
 
@@ -45,3 +44,25 @@ The data currently included in this repository are **selected subsets** derived 
     (dataset information and download: https://www.unb.ca/cic/datasets/tor.html).
 
 These subsets are intended to illustrate the usage of JA4Tor and the classifier pipeline without requiring users to download the full raw pcap collections.
+
+## Classifier Feature Policy
+
+The default classifier excludes source/destination IP addresses and ports because these fields are sample-identifying information and may encode capture context:
+
+```bash
+python classifier.py --train data/train.csv --test data/test.csv
+```
+
+For exact reproduction of the legacy public artifact only, restore those columns explicitly:
+
+```bash
+python classifier.py --train data/train.csv --test data/test.csv --include-sii
+```
+
+Run the ten-seed shortcut audit and generate its vector PDF figure with:
+
+```bash
+python artifact_audit.py --repo . --seeds 10
+```
+
+The current CSV files do not include pcap, session, website, proxy-endpoint, capture-time, or run identifiers. A future manifest must provide these groups before a leakage-resistant split can be independently audited.
