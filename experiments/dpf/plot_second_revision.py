@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Generate second-revision vector figures without compiling the paper."""
 
+from __future__ import annotations
+
 import csv
+import json
 from pathlib import Path
 
 import matplotlib as mpl
@@ -44,6 +47,28 @@ def save(fig: plt.Figure, name: str) -> None:
     OUT.mkdir(exist_ok=True)
     fig.savefig(OUT / name, format="pdf", bbox_inches="tight")
     plt.close(fig)
+
+
+def result_artifact(name: str) -> Path | None:
+    public_names = {
+        "summary.csv": "model_seed_summary.csv",
+        "details.json": "details.json",
+        "confusion_matrix.npy": "confusion_matrix.npy",
+    }
+    candidates = [
+        ROOT / "experiments" / "dpf" / "remote_results_20260712" / "run" / "main_past_seed42" / name,
+        ROOT / "run" / "main_past_seed42" / name,
+        ROOT / "experiments" / "dpf" / "results" / public_names[name],
+    ]
+    return next((path for path in candidates if path.exists()), None)
+
+
+def measured_summary() -> dict[str, dict[str, str]]:
+    path = result_artifact("summary.csv")
+    if path is None:
+        return {}
+    with path.open(newline="", encoding="utf-8") as handle:
+        return {row["variant"]: row for row in csv.DictReader(handle)}
 
 
 def box(ax, xy, width, height, text, color=BLUE, face="white", lw=1.2, size=8):
@@ -148,14 +173,22 @@ def main_comparison():
     methods = ["Attn-LSTM", "FS-Net", "DecETT", "YaTC", "ET-BERT", "JA4Tor-H", "JA4Tor-G", "JA4Tor-DPF"]
     means = np.array([92.14, 94.08, 98.03, 98.82, 99.09, 99.19, 99.24, 99.30])
     stds = np.array([0.24, 0.18, 0.09, 0.07, 0.05, 0.04, 0.03, 0.03])
+    colors = [RED] * len(methods)
+    summary = measured_summary()
+    for index, variant in [(5, "Hierarchical-FULL"), (6, "Global-FULL"), (7, "DPF-FULL")]:
+        if variant in summary:
+            means[index] = float(summary[variant]["macro_f1_mean"]) * 100
+            stds[index] = float(summary[variant]["macro_f1_std"]) * 100
+            colors[index] = BLUE
     fig, ax = plt.subplots(figsize=(6.8, 3.2))
     y = np.arange(len(methods))
-    ax.errorbar(means, y, xerr=stds, fmt="o", color=RED, ecolor=RED, capsize=3, ms=5)
+    for x, yy, err, color in zip(means, y, stds, colors):
+        ax.errorbar(x, yy, xerr=err, fmt="o", color=color, ecolor=color, capsize=3, ms=5)
     ax.set_yticks(y, methods); ax.invert_yaxis(); ax.set_xlabel("Macro-F1 (%)")
     ax.set_xlim(91.5, 99.7); ax.grid(axis="x", alpha=0.25)
-    for x, yy in zip(means, y): ax.text(x + 0.10, yy, f"{x:.2f}", va="center", color=RED, fontsize=8)
+    for x, yy, color in zip(means, y, colors): ax.text(x + 0.10, yy, f"{x:.2f}", va="center", color=color, fontsize=8)
     ax.set_title("Pcap-disjoint five-class comparison")
-    ax.text(1, -0.18, "Red: prespecified training values", transform=ax.transAxes, ha="right", color=RED, fontsize=8)
+    ax.text(1, -0.18, "Red: prespecified baselines; blue: measured JA4Tor", transform=ax.transAxes, ha="right", color=GRAY, fontsize=8)
     save(fig, "main_comparison.pdf")
 
 
@@ -164,18 +197,33 @@ def dpf_ablation():
     vals = [99.19, 99.24, 99.30, 99.23, 99.16, 99.20, 67.70]
     weights = [0, .25, .5, .75, 1]
     sensitivity = [99.19, 99.30, 99.26, 99.25, 99.24]
+    summary = measured_summary()
+    variants = ["Hierarchical-FULL", "Global-FULL", "DPF-FULL", "DPF-FULL-NoJSD", "HardHierarchy-FULL", "DPF-PT", "DPF-AS"]
+    measured = all(variant in summary for variant in variants)
+    if measured:
+        vals = [float(summary[variant]["macro_f1_mean"]) * 100 for variant in variants]
+        detail_path = result_artifact("details.json")
+        details = json.loads(detail_path.read_text(encoding="utf-8"))
+        full = [item for item in details if item["view"] == "full" and item["use_jsd"]]
+        sensitivity = [
+            np.mean([item["validation_f1_by_weight"][str(float(weight))] for item in full]) * 100
+            for weight in weights
+        ]
+    color = BLUE if measured else RED
     fig, axes = plt.subplots(1, 2, figsize=(7.1, 2.85))
-    axes[0].barh(np.arange(len(labels)), vals, color=RED, alpha=.82)
-    axes[0].set_yticks(np.arange(len(labels)), labels); axes[0].invert_yaxis(); axes[0].set_xlim(65, 100)
+    axes[0].barh(np.arange(len(labels)), vals, color=color, alpha=.82)
+    axes[0].set_yticks(np.arange(len(labels)), labels); axes[0].invert_yaxis(); axes[0].set_xlim(min(vals)-5, max(vals)+1)
     axes[0].set_xlabel("Macro-F1 (%)"); axes[0].set_title("(a) Components and views")
-    for i, v in enumerate(vals): axes[0].text(v + .35, i, f"{v:.2f}", va="center", color=RED, fontsize=7.5)
-    axes[1].plot(weights, sensitivity, "o-", color=RED, lw=1.5)
-    axes[1].axvline(.25, color=GRAY, ls="--", lw=1)
-    axes[1].set_xticks(weights); axes[1].set_ylim(99.15, 99.33); axes[1].grid(alpha=.25)
+    for i, v in enumerate(vals): axes[0].text(v + .35, i, f"{v:.2f}", va="center", color=color, fontsize=7.5)
+    axes[1].plot(weights, sensitivity, "o-", color=color, lw=1.5)
+    selected_line = weights[int(np.argmax(sensitivity))] if measured else .25
+    axes[1].axvline(selected_line, color=GRAY, ls="--", lw=1)
+    axes[1].set_xticks(weights); axes[1].set_ylim(min(sensitivity)-.15, max(sensitivity)+.15); axes[1].grid(alpha=.25)
     axes[1].set_xlabel("Fusion weight $\\lambda$")
     axes[1].set_title("(b) Validation sensitivity")
     fig.subplots_adjust(wspace=.30, bottom=.22)
-    fig.text(.99, .02, "Red: prespecified training values", ha="right", color=RED, fontsize=8)
+    note = "Blue: measured pcap-disjoint results" if measured else "Red: prespecified training values"
+    fig.text(.99, .02, note, ha="right", color=color, fontsize=8)
     save(fig, "dpf_ablation_sensitivity.pdf")
 
 
@@ -186,15 +234,23 @@ def confusion():
         [.05, .12, 99.31, .20, .32], [.08, .15, .26, 99.12, .39],
         [.06, .13, .31, .28, 99.22],
     ])
+    measured = False
+    matrix_path = result_artifact("confusion_matrix.npy")
+    if matrix_path is not None:
+        counts = np.load(matrix_path)
+        matrix = counts / counts.sum(axis=1, keepdims=True) * 100
+        measured = True
+    text_color = BLUE if measured else RED
     fig, ax = plt.subplots(figsize=(4.9, 4.0))
     im = ax.imshow(matrix, cmap="Blues", vmin=0, vmax=100)
     ax.set_xticks(range(5), names, rotation=30, ha="right"); ax.set_yticks(range(5), names)
     ax.set_xlabel("Predicted label"); ax.set_ylabel("True label")
     for i in range(5):
-        for j in range(5): ax.text(j, i, f"{matrix[i,j]:.2f}", ha="center", va="center", color=RED, fontsize=7.5)
+        for j in range(5): ax.text(j, i, f"{matrix[i,j]:.2f}", ha="center", va="center", color=text_color, fontsize=7.5)
     fig.colorbar(im, ax=ax, fraction=.046, pad=.04, label="Row-normalized (%)")
     ax.set_title("JA4Tor-DPF confusion matrix")
-    ax.text(1, -0.30, "Red: prespecified values", transform=ax.transAxes, ha="right", color=RED, fontsize=8)
+    note = "Blue: measured mean over ten model seeds" if measured else "Red: prespecified values"
+    ax.text(1, -0.30, note, transform=ax.transAxes, ha="right", color=text_color, fontsize=8)
     save(fig, "confusion_matrix_dpf.pdf")
 
 
@@ -247,12 +303,19 @@ def runtime():
     names = ["Attn-LSTM", "FS-Net", "DecETT", "YaTC", "ET-BERT", "JA4Tor-H", "JA4Tor-G", "JA4Tor-DPF"]
     time_s = np.array([310, 420, 165, 780, 1240, 24, 11, 35])
     f1 = np.array([92.14, 94.08, 98.03, 98.82, 99.09, 99.19, 99.24, 99.30])
+    colors = [RED] * len(names)
+    summary = measured_summary()
+    if "DPF-FULL" in summary:
+        time_s[-1] = float(summary["DPF-FULL"]["training_seconds_mean"])
+        f1[-1] = float(summary["DPF-FULL"]["macro_f1_mean"]) * 100
+        colors[-1] = BLUE
     fig, ax = plt.subplots(figsize=(6.2, 3.1))
-    ax.scatter(time_s, f1, color=RED, s=35)
-    for x, y, n in zip(time_s, f1, names): ax.annotate(n, (x,y), xytext=(4,4), textcoords="offset points", fontsize=7.2, color=RED)
+    for x, y, n, color in zip(time_s, f1, names, colors):
+        ax.scatter(x, y, color=color, s=35)
+        ax.annotate(n, (x,y), xytext=(4,4), textcoords="offset points", fontsize=7.2, color=color)
     ax.set_xscale("log"); ax.set_xlabel("Training time (s, log scale)"); ax.set_ylabel("Macro-F1 (%)")
     ax.set_ylim(91.5, 99.7); ax.grid(alpha=.25); ax.set_title("Accuracy–cost positioning")
-    ax.text(1, -.20, "Red: prespecified coordinates", transform=ax.transAxes, ha="right", color=RED, fontsize=8)
+    ax.text(1, -.20, "Red: prespecified; blue: measured DPF", transform=ax.transAxes, ha="right", color=GRAY, fontsize=8)
     save(fig, "runtime_accuracy.pdf")
 
 
