@@ -1,6 +1,6 @@
 # JA4TOR: Exposing Tor-over-Proxy Tunnels via Protocol-Constrained Behavioral Dynamics
 
-This repository contains the research artifact for **“JA4TOR: Exposing Tor-over-Proxy Tunnels via Protocol-Constrained Behavioral Dynamics.”** The repository currently supports feature extraction, row-level classifier reproduction, and shortcut-feature auditing. It does not yet contain the raw pcap inventory or the group metadata needed to verify pcap/session/run-disjoint evaluation.
+This repository contains the research artifact for **“JA4TOR: Exposing Tor-over-Proxy Tunnels via Protocol-Constrained Behavioral Dynamics.”** It supports feature extraction, legacy row-level reproduction, and the manifest-backed Dual-Path PAST Fusion (DPF) experiment. Raw pcaps are not yet included; users must provide one extracted CSV per capture to reproduce the pcap-disjoint experiment.
 
 ## Project Structure
 
@@ -66,3 +66,45 @@ python artifact_audit.py --repo . --seeds 10
 ```
 
 The current CSV files do not include pcap, session, website, proxy-endpoint, capture-time, or run identifiers. A future manifest must provide these groups before a leakage-resistant split can be independently audited.
+
+## Pcap-Disjoint Dual-Path PAST Fusion
+
+DPF combines a probabilistic three-level hierarchy with a global five-class expert:
+
+```text
+p(y|x) = (1 - lambda) p_H(y|x) + lambda p_G(y|x)
+```
+
+Build a six-field manifest from one feature CSV per pcap:
+
+```bash
+python experiments/dpf/build_manifest.py \
+  --data-root /path/to/per-capture/features \
+  --output run/manifest_seed42.csv \
+  --split-seed 42
+```
+
+Run ten model seeds. The fusion weight is selected from `{0, 0.25, 0.5, 0.75, 1}` on validation data only:
+
+```bash
+python experiments/dpf/run_dpf.py \
+  --split-manifest run/manifest_seed42.csv \
+  --output-dir run/main_seed42 \
+  --mode dual-path \
+  --seeds 10
+```
+
+The public interface also exposes:
+
+```text
+--mode {hierarchical,global,dual-path}
+--fusion-weight FLOAT
+--split-manifest PATH
+--random-seed INT
+```
+
+Each run writes `results.csv`, `summary.csv`, `details.json`, `confusion_matrix.npy`, and `config.json`. The default input policy fails closed on Flow ID, timestamps, protocol numbers, IP addresses, ports, SNI/domain strings, and high-cardinality hashes. Before using any result in the paper, complete `experiments/dpf/red_placeholder_replacement_checklist.md`.
+
+## Result Status
+
+Values shown in red in the manuscript and revision figures are prespecified training placeholders, not measurements. The historical ET-BERT 99.20% and JA4Tor 98.96% values belong to the original flow-level study and are not pcap-disjoint results. Final tables must be regenerated from versioned CSV outputs after all model and split seeds complete.
