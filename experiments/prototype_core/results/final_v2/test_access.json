@@ -1,0 +1,18 @@
+{
+  "test_opened": true,
+  "test_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "budget": 200,
+  "test_capture_count": 200,
+  "test_flow_rows_per_class": 160
+}

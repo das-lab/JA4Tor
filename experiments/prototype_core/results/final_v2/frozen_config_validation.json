@@ -1,0 +1,21 @@
+{
+  "candidate_file": "/data1/zcx/ja4tor/experiments/prototype_core_20260712/run/selection_candidates.csv",
+  "candidate_sha256": "64de3a09adfaeef240dcd195ffb8de6850d6bd3f9f773f7f4eb219d0014afc0c",
+  "selected_budget": 200,
+  "n_estimators": 300,
+  "max_features": "0.5",
+  "fusion_weight": 1.0,
+  "validation_macro_f1_mean": 0.9504005641246485,
+  "validation_macro_f1_std": 0.0,
+  "validation_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "target_macro_f1": 0.985,
+  "selection_basis": "validation only",
+  "test_opened": false,
+  "feature_policy": "SII-free PAST; Prototype-Core ranking uses P/T"
+}

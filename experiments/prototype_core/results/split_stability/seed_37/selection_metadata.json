@@ -1,0 +1,21 @@
+{
+  "raw_root": "/data1/zcx/ja4tor/data/ja4tor",
+  "feature_root": "/data1/zcx/ja4tor/models/fusion_flow_extractor-0.3/output/csv",
+  "filters": {
+    "min_pcap_mib": 0.5,
+    "max_pcap_mib": 20.0,
+    "min_flow_rows": 4
+  },
+  "per_class_budget": 200,
+  "split_seed": 37,
+  "split_limits": {
+    "train": 140,
+    "validation": 20,
+    "test": 40
+  },
+  "eligible_captures": 7542,
+  "selected_captures": 1000,
+  "embedding_columns": [],
+  "prototype_source": "training candidates only",
+  "ranking": "ascending own-class robust prototype distance"
+}

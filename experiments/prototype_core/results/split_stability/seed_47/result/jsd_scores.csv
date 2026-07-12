@@ -1,0 +1,281 @@
+stage,feature,jsd_score
+NonTor / Tor-family,Init_Win_bytes_backward,0.7825371636731028
+NonTor / Tor-family,server_latency,0.6448000561145085
+NonTor / Tor-family,Fwd Packet Length Std,0.5704861757175782
+NonTor / Tor-family,Bwd Packet Length Max,0.5623980661389079
+NonTor / Tor-family,Bwd Packet Length Std,0.5579710616227123
+NonTor / Tor-family,Average Packet Size,0.5528272082239326
+NonTor / Tor-family,Fwd Packet Length Max,0.48421726013145705
+NonTor / Tor-family,Fwd Packet Length Mean,0.4695980370362709
+NonTor / Tor-family,Avg Fwd Segment Size,0.4695980370362709
+NonTor / Tor-family,Bwd Packet Length Mean,0.45941773614730136
+NonTor / Tor-family,Avg Bwd Segment Size,0.45941773614730136
+NonTor / Tor-family,SYN Flag Count,0.44112806352070155
+NonTor / Tor-family,Idle Min,0.416565257923874
+NonTor / Tor-family,Idle Max,0.4158317401490649
+NonTor / Tor-family,tls_server_ptype,0.409565555702956
+NonTor / Tor-family,tls_server_version,0.409565555702956
+NonTor / Tor-family,tls_server_alpn_info,0.409565555702956
+NonTor / Tor-family,tls_server_cipher_val,0.4095655557028999
+NonTor / Tor-family,Fwd IAT Total,0.4052640076874254
+NonTor / Tor-family,Flow Duration,0.40324156819921975
+NonTor / Tor-family,Idle Mean,0.4022503485031797
+NonTor / Tor-family,Flow IAT Max,0.3947337680475975
+NonTor / Tor-family,Fwd IAT Max,0.39227221801572043
+NonTor / Tor-family,Down/Up Ratio,0.3835441390626096
+NonTor / Tor-family,Flow IAT Mean,0.35621245263824663
+NonTor / Tor-family,Flow IAT Std,0.35233446608382246
+NonTor / Tor-family,Fwd IAT Mean,0.3452746465368152
+NonTor / Tor-family,Init_Win_bytes_forward,0.3443853045922379
+NonTor / Tor-family,Bwd IAT Total,0.3424795278791003
+NonTor / Tor-family,Fwd IAT Std,0.33539359673879676
+NonTor / Tor-family,Flow Packets/s,0.32251654590110634
+NonTor / Tor-family,Idle Std,0.31774761702266024
+NonTor / Tor-family,Bwd Packet Length Min,0.3155806380256446
+NonTor / Tor-family,Packet Length Variance,0.302733417952375
+NonTor / Tor-family,Active Max,0.30049929827827204
+NonTor / Tor-family,FIN Flag Count,0.2979195913101249
+NonTor / Tor-family,Active Std,0.2926759669368597
+NonTor / Tor-family,Bwd IAT Max,0.290612364534679
+NonTor / Tor-family,RST Flag Count,0.27874586657438655
+NonTor / Tor-family,Bwd IAT Std,0.266041078472314
+NonTor / Tor-family,Total Length of Fwd Packets,0.2631807741660271
+NonTor / Tor-family,Fwd IAT Min,0.2528290631426609
+NonTor / Tor-family,Flow IAT Min,0.24765815947771838
+NonTor / Tor-family,Active Mean,0.24191592444050827
+NonTor / Tor-family,PSH Flag Count,0.23322203330912092
+NonTor / Tor-family,Bwd IAT Mean,0.22559880308786834
+NonTor / Tor-family,Total Fwd Packets,0.2243802341256349
+NonTor / Tor-family,Total Length of Bwd Packets,0.21524045152154042
+NonTor / Tor-family,ACK Flag Count,0.20744184613018238
+NonTor / Tor-family,Total Bwd Packets,0.184659481990995
+NonTor / Tor-family,Active Min,0.17055243977889448
+NonTor / Tor-family,Bwd IAT Min,0.14235584246494343
+NonTor / Tor-family,Flow Bytes/s,0.13598783609250265
+NonTor / Tor-family,Fwd Packet Length Min,0.10466345035490118
+NonTor / Tor-family,tls_client_ptype,0.09350644787358409
+NonTor / Tor-family,tls_client_version,0.09350644787358409
+NonTor / Tor-family,tls_client_sni_presence,0.09350644787358409
+NonTor / Tor-family,tls_client_cipher_count,0.09350644787358409
+NonTor / Tor-family,tls_client_alpn_info,0.09350644787358409
+NonTor / Tor-family,client_latency,0.07563000240777489
+NonTor / Tor-family,http_req_version,0.06596835677903597
+NonTor / Tor-family,http_req_has_cookie,0.06596835677903597
+NonTor / Tor-family,http_req_has_referer,0.06596835677903597
+NonTor / Tor-family,http_req_has_lang,0.06596835677903597
+NonTor / Tor-family,http_method,0.0
+NonTor / Tor-family,http_path_len,0.0
+NonTor / Tor-family,http_req_method_short,0.0
+NonTor / Tor-family,http_req_header_count,0.0
+NonTor / Tor-family,tls_client_extension_count,0.0
+NonTor / Tor-family,tls_server_extension_count,0.0
+Tor / Tor-over-proxy,Down/Up Ratio,0.7722866427242722
+Tor / Tor-over-proxy,Bwd Packet Length Min,0.6655941667943458
+Tor / Tor-over-proxy,Init_Win_bytes_backward,0.6292711850345644
+Tor / Tor-over-proxy,SYN Flag Count,0.6064612949033152
+Tor / Tor-over-proxy,Flow IAT Mean,0.5988559766456384
+Tor / Tor-over-proxy,Fwd IAT Mean,0.5793583857404294
+Tor / Tor-over-proxy,Fwd IAT Max,0.5792917396609075
+Tor / Tor-over-proxy,Fwd IAT Min,0.5672382227124932
+Tor / Tor-over-proxy,Flow IAT Min,0.5644627985891193
+Tor / Tor-over-proxy,Idle Max,0.543884737651429
+Tor / Tor-over-proxy,Flow IAT Max,0.5415059392883573
+Tor / Tor-over-proxy,Fwd IAT Total,0.5391567157921002
+Tor / Tor-over-proxy,RST Flag Count,0.5244524058303148
+Tor / Tor-over-proxy,Bwd IAT Max,0.4963948378474466
+Tor / Tor-over-proxy,Average Packet Size,0.49350135054835825
+Tor / Tor-over-proxy,Flow Duration,0.4836054881457273
+Tor / Tor-over-proxy,Idle Min,0.47536070368190275
+Tor / Tor-over-proxy,Fwd IAT Std,0.4676284168980141
+Tor / Tor-over-proxy,Idle Mean,0.4668037964500327
+Tor / Tor-over-proxy,Fwd Packet Length Std,0.4565276925116637
+Tor / Tor-over-proxy,FIN Flag Count,0.4536148221678662
+Tor / Tor-over-proxy,Fwd Packet Length Max,0.4492002139825174
+Tor / Tor-over-proxy,Flow IAT Std,0.4491216219883589
+Tor / Tor-over-proxy,Idle Std,0.4408577990032124
+Tor / Tor-over-proxy,Fwd Packet Length Mean,0.4389949975982929
+Tor / Tor-over-proxy,Avg Fwd Segment Size,0.4389949975982929
+Tor / Tor-over-proxy,Bwd IAT Mean,0.42334202501958224
+Tor / Tor-over-proxy,Bwd IAT Total,0.41099646845927496
+Tor / Tor-over-proxy,Bwd IAT Std,0.38657546957022265
+Tor / Tor-over-proxy,Bwd Packet Length Max,0.3843493406887224
+Tor / Tor-over-proxy,Bwd Packet Length Std,0.3778158392893552
+Tor / Tor-over-proxy,Bwd Packet Length Mean,0.3711806217142478
+Tor / Tor-over-proxy,Avg Bwd Segment Size,0.3711806217142478
+Tor / Tor-over-proxy,Packet Length Variance,0.35582602413664144
+Tor / Tor-over-proxy,Active Max,0.3012819208212482
+Tor / Tor-over-proxy,Active Std,0.29784022366520546
+Tor / Tor-over-proxy,Flow Packets/s,0.2944072985972584
+Tor / Tor-over-proxy,Bwd IAT Min,0.26382878646518
+Tor / Tor-over-proxy,Active Mean,0.2508977656379182
+Tor / Tor-over-proxy,Total Length of Fwd Packets,0.2245818626975768
+Tor / Tor-over-proxy,Total Bwd Packets,0.2173259599770203
+Tor / Tor-over-proxy,Init_Win_bytes_forward,0.21340832573675458
+Tor / Tor-over-proxy,PSH Flag Count,0.20795800290906707
+Tor / Tor-over-proxy,ACK Flag Count,0.20485518323569415
+Tor / Tor-over-proxy,Total Fwd Packets,0.1979806076953531
+Tor / Tor-over-proxy,Total Length of Bwd Packets,0.18774720250208868
+Tor / Tor-over-proxy,server_latency,0.17427939552008861
+Tor / Tor-over-proxy,Active Min,0.16881114383709922
+Tor / Tor-over-proxy,client_latency,0.15264531429306624
+Tor / Tor-over-proxy,Flow Bytes/s,0.10717808688469238
+Tor / Tor-over-proxy,Fwd Packet Length Min,0.09230252949522803
+Tor / Tor-over-proxy,http_method,0.0
+Tor / Tor-over-proxy,http_path_len,0.0
+Tor / Tor-over-proxy,http_req_method_short,0.0
+Tor / Tor-over-proxy,http_req_version,0.0
+Tor / Tor-over-proxy,http_req_has_cookie,0.0
+Tor / Tor-over-proxy,http_req_has_referer,0.0
+Tor / Tor-over-proxy,http_req_header_count,0.0
+Tor / Tor-over-proxy,http_req_has_lang,0.0
+Tor / Tor-over-proxy,tls_client_ptype,0.0
+Tor / Tor-over-proxy,tls_client_version,0.0
+Tor / Tor-over-proxy,tls_client_sni_presence,0.0
+Tor / Tor-over-proxy,tls_client_cipher_count,0.0
+Tor / Tor-over-proxy,tls_client_extension_count,0.0
+Tor / Tor-over-proxy,tls_client_alpn_info,0.0
+Tor / Tor-over-proxy,tls_server_ptype,0.0
+Tor / Tor-over-proxy,tls_server_version,0.0
+Tor / Tor-over-proxy,tls_server_cipher_val,0.0
+Tor / Tor-over-proxy,tls_server_extension_count,0.0
+Tor / Tor-over-proxy,tls_server_alpn_info,0.0
+Proxy family,Fwd Packet Length Std,0.5397216400566318
+Proxy family,Average Packet Size,0.5115129157868805
+Proxy family,client_latency,0.4636244241756405
+Proxy family,server_latency,0.46208396729595275
+Proxy family,Down/Up Ratio,0.4605986500978158
+Proxy family,Flow IAT Std,0.4392966162819298
+Proxy family,Fwd IAT Std,0.43661307578635294
+Proxy family,Bwd IAT Std,0.43496304129670454
+Proxy family,Bwd IAT Max,0.42970200190489805
+Proxy family,Fwd IAT Max,0.42844886595786996
+Proxy family,Flow IAT Max,0.427618562204742
+Proxy family,Idle Max,0.41912293599999395
+Proxy family,Bwd Packet Length Std,0.4099331997818516
+Proxy family,Flow IAT Mean,0.40825184814872256
+Proxy family,Bwd Packet Length Mean,0.4043166181121622
+Proxy family,Avg Bwd Segment Size,0.4043166181121622
+Proxy family,Bwd IAT Mean,0.3981119549866383
+Proxy family,Fwd IAT Mean,0.39610709473245814
+Proxy family,Idle Mean,0.3929609724587632
+Proxy family,FIN Flag Count,0.38906236618544443
+Proxy family,Fwd Packet Length Mean,0.3866673920929027
+Proxy family,Avg Fwd Segment Size,0.3866673920929027
+Proxy family,Fwd Packet Length Max,0.38335115736571207
+Proxy family,Fwd IAT Total,0.3825475137805858
+Proxy family,Flow Duration,0.3824990772967796
+Proxy family,Bwd IAT Total,0.3820850376847858
+Proxy family,Idle Min,0.3786206893627035
+Proxy family,Bwd Packet Length Max,0.3690644053619314
+Proxy family,Active Max,0.33512509956008457
+Proxy family,Active Std,0.3337742470892629
+Proxy family,Packet Length Variance,0.3260370833433854
+Proxy family,Active Mean,0.2844478793525506
+Proxy family,Total Bwd Packets,0.27784130435346
+Proxy family,Total Length of Fwd Packets,0.2765935141773029
+Proxy family,Total Fwd Packets,0.27446255583442863
+Proxy family,ACK Flag Count,0.27223647132548695
+Proxy family,Bwd IAT Min,0.2612739566352059
+Proxy family,Idle Std,0.25799721307763446
+Proxy family,Init_Win_bytes_backward,0.25262249753119065
+Proxy family,PSH Flag Count,0.24598120636625057
+Proxy family,Flow Packets/s,0.22488704495578396
+Proxy family,Init_Win_bytes_forward,0.19692463851294809
+Proxy family,Flow IAT Min,0.19035176657522648
+Proxy family,Active Min,0.1867210781396713
+Proxy family,SYN Flag Count,0.1819753380104967
+Proxy family,Total Length of Bwd Packets,0.17782043167098335
+Proxy family,Fwd Packet Length Min,0.12639750742167805
+Proxy family,Flow Bytes/s,0.12271353448153693
+Proxy family,RST Flag Count,0.04343262046164819
+Proxy family,Bwd Packet Length Min,0.043235676578823344
+Proxy family,Fwd IAT Min,0.04067113421119161
+Proxy family,http_method,0.0
+Proxy family,http_path_len,0.0
+Proxy family,http_req_method_short,0.0
+Proxy family,http_req_version,0.0
+Proxy family,http_req_has_cookie,0.0
+Proxy family,http_req_has_referer,0.0
+Proxy family,http_req_header_count,0.0
+Proxy family,http_req_has_lang,0.0
+Proxy family,tls_client_ptype,0.0
+Proxy family,tls_client_version,0.0
+Proxy family,tls_client_sni_presence,0.0
+Proxy family,tls_client_cipher_count,0.0
+Proxy family,tls_client_extension_count,0.0
+Proxy family,tls_client_alpn_info,0.0
+Proxy family,tls_server_ptype,0.0
+Proxy family,tls_server_version,0.0
+Proxy family,tls_server_cipher_val,0.0
+Proxy family,tls_server_extension_count,0.0
+Proxy family,tls_server_alpn_info,0.0
+Global five-class,Init_Win_bytes_backward,0.5833155794850564
+Global five-class,Average Packet Size,0.558343296652273
+Global five-class,Fwd Packet Length Std,0.5550198072319106
+Global five-class,Down/Up Ratio,0.5462572346895578
+Global five-class,Bwd Packet Length Std,0.46610805984957493
+Global five-class,Flow IAT Mean,0.4614399384858192
+Global five-class,Fwd IAT Total,0.4592072709993781
+Global five-class,Fwd Packet Length Mean,0.45540965795227323
+Global five-class,Avg Fwd Segment Size,0.45540965795227323
+Global five-class,Bwd Packet Length Max,0.45488563716665
+Global five-class,Fwd Packet Length Max,0.4514124493253129
+Global five-class,Fwd IAT Mean,0.4477274389417835
+Global five-class,Bwd Packet Length Mean,0.44486165739494893
+Global five-class,Avg Bwd Segment Size,0.44486165739494893
+Global five-class,Flow Duration,0.4447150641661059
+Global five-class,Idle Mean,0.4380643561674106
+Global five-class,Idle Min,0.437994110860224
+Global five-class,Fwd IAT Std,0.4345014465203204
+Global five-class,Flow IAT Std,0.43110745131473316
+Global five-class,FIN Flag Count,0.4272121873015361
+Global five-class,Idle Max,0.42603126782724177
+Global five-class,Fwd IAT Max,0.426001127022948
+Global five-class,Bwd IAT Max,0.4207357843221837
+Global five-class,Flow IAT Max,0.42056436856861107
+Global five-class,SYN Flag Count,0.4145853925536258
+Global five-class,Bwd IAT Total,0.3916737168138876
+Global five-class,Bwd IAT Std,0.374423957927453
+Global five-class,Bwd IAT Mean,0.358710486465529
+Global five-class,server_latency,0.348211906498761
+Global five-class,Bwd Packet Length Min,0.3230777025860935
+Global five-class,Active Max,0.32190196126556553
+Global five-class,Idle Std,0.3170864056277399
+Global five-class,Packet Length Variance,0.3069155891203277
+Global five-class,Active Std,0.30676853209191346
+Global five-class,Flow Packets/s,0.2769393619852509
+Global five-class,Active Mean,0.2731083007975362
+Global five-class,Init_Win_bytes_forward,0.26755726400442054
+Global five-class,RST Flag Count,0.26564304981018383
+Global five-class,Fwd IAT Min,0.2520119909138926
+Global five-class,Total Length of Fwd Packets,0.25072036594877306
+Global five-class,Flow IAT Min,0.23265590756063953
+Global five-class,PSH Flag Count,0.2185921101893268
+Global five-class,Total Fwd Packets,0.20921500368685356
+Global five-class,Total Length of Bwd Packets,0.19653202765710595
+Global five-class,ACK Flag Count,0.19382345796671535
+Global five-class,Total Bwd Packets,0.18366058430281737
+Global five-class,Active Min,0.1798995083896752
+Global five-class,tls_server_ptype,0.16382622228116542
+Global five-class,tls_server_version,0.16382622228116542
+Global five-class,tls_server_alpn_info,0.16382622228116542
+Global five-class,tls_server_cipher_val,0.1638262222810763
+Global five-class,Flow Bytes/s,0.12334945504977086
+Global five-class,Fwd Packet Length Min,0.11199544994987842
+Global five-class,Bwd IAT Min,0.10490299273846426
+Global five-class,client_latency,0.06105812571712138
+Global five-class,tls_client_ptype,0.03740257914937552
+Global five-class,tls_client_version,0.03740257914937552
+Global five-class,tls_client_sni_presence,0.03740257914937552
+Global five-class,tls_client_cipher_count,0.03740257914937552
+Global five-class,tls_client_alpn_info,0.03740257914937552
+Global five-class,http_req_version,0.02638734271153395
+Global five-class,http_req_has_cookie,0.02638734271153395
+Global five-class,http_req_has_referer,0.02638734271153395
+Global five-class,http_req_has_lang,0.02638734271153395
+Global five-class,http_method,0.0
+Global five-class,http_path_len,0.0
+Global five-class,http_req_method_short,0.0
+Global five-class,http_req_header_count,0.0
+Global five-class,tls_client_extension_count,0.0
+Global five-class,tls_server_extension_count,0.0

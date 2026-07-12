@@ -3,5 +3,7 @@ __pycache__/
 results/
 !experiments/dpf/results/
 !experiments/dpf/results/**
+!experiments/prototype_core/results/
+!experiments/prototype_core/results/**
 artifact_audit/
 artifact_sii_audit.pdf

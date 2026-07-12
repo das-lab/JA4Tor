@@ -103,12 +103,76 @@ The public interface also exposes:
 --random-seed INT
 ```
 
-Each run writes `results.csv`, `summary.csv`, `details.json`, `confusion_matrix.npy`, and `config.json`. The default input policy fails closed on Flow ID, timestamps, protocol numbers, IP addresses, ports, SNI/domain strings, and high-cardinality hashes. Before using any result in the paper, complete `experiments/dpf/red_placeholder_replacement_checklist.md`.
+Each run writes `results.csv`, `summary.csv`, `details.json`, `confusion_matrix.npy`, and `config.json`. The default input policy fails closed on Flow ID, timestamps, protocol numbers, IP addresses, ports, SNI/domain strings, and high-cardinality hashes.
+
+## Prototype-Core Capture Selection
+
+Prototype-Core is a controlled companion regime. It hashes capture IDs into
+70/10/20 partitions before fitting class prototypes, represents every capture
+with median/IQR summaries of SII-free P/T features, and ranks captures by
+increasing robust distance to the training-defined own-class prototype.
+
+Build the candidate index and a materialized manifest without copying pcaps:
+
+```bash
+python experiments/prototype_core/select_prototype_subset.py \
+  --raw-root /path/to/ja4tor/pcap-root \
+  --feature-root /path/to/per-capture/csv-root \
+  --output-manifest run/manifest_budget400_seed42.csv \
+  --per-class-budget 400 \
+  --split-seed 42 \
+  --min-pcap-mib 0.5 \
+  --max-pcap-mib 20 \
+  --min-flow-rows 4
+```
+
+Select the budget and model configuration on validation only, then run the
+frozen test once:
+
+```bash
+python experiments/prototype_core/run_prototype_core.py \
+  --selection-manifest run/selection_candidates.csv \
+  --output-dir run/search \
+  --validation-only \
+  --budgets 100,200,300 \
+  --validation-seeds 5
+
+python experiments/prototype_core/run_prototype_core.py \
+  --selection-manifest run/selection_candidates.csv \
+  --output-dir run/final \
+  --frozen-config run/search/frozen_config.json \
+  --test-seeds 10
+```
+
+The test command refuses repeated evaluation when `test_results.csv` already
+exists. Complete manifests, configs, per-seed outputs, and figures are under
+`experiments/prototype_core/results/` and `figures/prototype_core/`.
 
 ## Result Status
 
-Values shown in red in the manuscript and revision figures are prespecified training placeholders, not measurements. The historical ET-BERT 99.20% and JA4Tor 98.96% values belong to the original flow-level study and are not pcap-disjoint results. Final tables must be regenerated from versioned CSV outputs after all model and split seeds complete.
+The synchronized unrestricted pcap-disjoint snapshot is under
+`experiments/dpf/results/`. On split seed 42, ten model seeds give macro-F1
+93.983% for the hierarchical expert, 95.117% for the global expert, and 95.072%
+for DPF.
 
-The synchronized pcap-disjoint pipeline snapshot is under `experiments/dpf/results/`. On split seed 42, ten model seeds give macro-F1 93.983% for the hierarchical expert, 95.117% for the global expert, and 95.072% for DPF. Across five pcap split seeds with model seed 0, DPF obtains 94.685% mean macro-F1 with 0.240% sample standard deviation. These measurements replace the corresponding JA4Tor rows and plots. Native deep-baseline rows remain red because they have not yet been rerun on the same manifests.
+The measured Prototype-Core validation search selects 200 captures per class,
+300 trees, `max_features=0.5`, and `lambda=1`. Its frozen ten-seed test gives:
 
-Vector revision figures are under `figures/revision/`. Red plot elements are prespecified placeholders; the blue pcap-split stability points are measured from `experiments/dpf/results/split_stability_summary.csv`.
+| Method | Macro-F1 (%) |
+|---|---:|
+| Logistic Regression | 86.83 |
+| ExtraTrees | 92.69 |
+| HistGradientBoosting | 93.98 |
+| Hard Hierarchy | 93.73 |
+| JA4Tor-H | 93.61 |
+| JA4Tor-G | 93.77 |
+| JA4Tor-DPF | 93.77 |
+
+Across pcap split seeds 7, 17, 27, 37, and 47, JA4Tor-DPF obtains
+94.39±1.02% macro-F1. This experiment did not reach the 98.5% target; the test
+result was not used to alter the selection rule or frozen configuration.
+
+The historical ET-BERT 99.20% and JA4Tor 98.96% values belong to the original
+flow-level study and are not comparable with either pcap-disjoint table. The
+current manuscript contains no active training-value placeholders. Packet-level
+shaping results are omitted until a functional replay experiment is available.

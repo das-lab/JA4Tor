@@ -1,0 +1,23 @@
+{
+  "candidate_file": "/data1/zcx/ja4tor/experiments/prototype_core_20260712/run/split_stability/seed_17/selection_candidates.csv",
+  "candidate_sha256": "333d928df58783156e351022360e8397533020edb98f38d9ee974c3dbf1818ed",
+  "selected_budget": 200,
+  "n_estimators": 300,
+  "max_features": "0.5",
+  "fusion_weight": 1.0,
+  "validation_macro_f1_mean": 0.9504005641246485,
+  "validation_macro_f1_std": 0.0,
+  "validation_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "target_macro_f1": 0.985,
+  "selection_basis": "validation only",
+  "test_opened": false,
+  "feature_policy": "SII-free PAST; Prototype-Core ranking uses P/T",
+  "split_seed": 17,
+  "model_configuration_frozen_from_split_seed": 42
+}
