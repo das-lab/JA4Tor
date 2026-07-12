@@ -214,7 +214,7 @@ def dpf_ablation():
     axes[0].barh(np.arange(len(labels)), vals, color=color, alpha=.82)
     axes[0].set_yticks(np.arange(len(labels)), labels); axes[0].invert_yaxis(); axes[0].set_xlim(min(vals)-5, max(vals)+1)
     axes[0].set_xlabel("Macro-F1 (%)"); axes[0].set_title("(a) Components and views")
-    for i, v in enumerate(vals): axes[0].text(v + .35, i, f"{v:.2f}", va="center", color=color, fontsize=7.5)
+    for i, v in enumerate(vals): axes[0].text(v + .35, i, f"{v:.2f}", va="center", color=color, fontsize=8)
     axes[1].plot(weights, sensitivity, "o-", color=color, lw=1.5)
     selected_line = weights[int(np.argmax(sensitivity))] if measured else .25
     axes[1].axvline(selected_line, color=GRAY, ls="--", lw=1)
@@ -246,7 +246,7 @@ def confusion():
     ax.set_xticks(range(5), names, rotation=30, ha="right"); ax.set_yticks(range(5), names)
     ax.set_xlabel("Predicted label"); ax.set_ylabel("True label")
     for i in range(5):
-        for j in range(5): ax.text(j, i, f"{matrix[i,j]:.2f}", ha="center", va="center", color=text_color, fontsize=7.5)
+        for j in range(5): ax.text(j, i, f"{matrix[i,j]:.2f}", ha="center", va="center", color=text_color, fontsize=8)
     fig.colorbar(im, ax=ax, fraction=.046, pad=.04, label="Row-normalized (%)")
     ax.set_title("JA4Tor-DPF confusion matrix")
     note = "Blue: measured mean over ten model seeds" if measured else "Red: prespecified values"
@@ -290,7 +290,7 @@ def stability():
     offsets = np.linspace(-.12, .12, len(values))
     ax.scatter(1 + offsets, values, color=color, s=24, zorder=3)
     for offset, value, seed in zip(offsets, values, seeds):
-        ax.annotate(str(seed), (1 + offset, value), xytext=(0, 6), textcoords="offset points", ha="center", fontsize=7.5, color=color)
+        ax.annotate(str(seed), (1 + offset, value), xytext=(0, 6), textcoords="offset points", ha="center", fontsize=8, color=color)
     ax.set_xticks([1], ["JA4Tor-DPF"]); ax.set_xlabel("Numbers above points are pcap split seeds")
     ax.set_ylabel("Macro-F1 (%)"); ax.set_ylim(min(values)-.2, max(values)+.2); ax.grid(axis="y", alpha=.25)
     ax.set_title("Pcap-disjoint split stability")
@@ -312,7 +312,7 @@ def runtime():
     fig, ax = plt.subplots(figsize=(6.2, 3.1))
     for x, y, n, color in zip(time_s, f1, names, colors):
         ax.scatter(x, y, color=color, s=35)
-        ax.annotate(n, (x,y), xytext=(4,4), textcoords="offset points", fontsize=7.2, color=color)
+        ax.annotate(n, (x,y), xytext=(4,4), textcoords="offset points", fontsize=8, color=color)
     ax.set_xscale("log"); ax.set_xlabel("Training time (s, log scale)"); ax.set_ylabel("Macro-F1 (%)")
     ax.set_ylim(91.5, 99.7); ax.grid(alpha=.25); ax.set_title("Accuracy–cost positioning")
     ax.text(1, -.20, "Red: prespecified; blue: measured DPF", transform=ax.transAxes, ha="right", color=GRAY, fontsize=8)
