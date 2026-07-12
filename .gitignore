@@ -1,5 +1,7 @@
 __pycache__/
 *.py[cod]
 results/
+!experiments/dpf/results/
+!experiments/dpf/results/**
 artifact_audit/
 artifact_sii_audit.pdf

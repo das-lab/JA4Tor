@@ -22,3 +22,7 @@ python run_dpf.py \
 The fusion weight is chosen from `{0, 0.25, 0.5, 0.75, 1}` on the validation
 partition. The test partition is evaluated only after this selection.
 
+`results/manifest_seed42.csv` records the synchronized six-field manifest;
+`results/model_seed_results.csv` and `results/model_seed_summary.csv` contain
+the ten-seed pcap-disjoint pipeline snapshot. Red values in the paper remain
+placeholders until native baselines are rerun with the same manifests.

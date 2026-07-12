@@ -1,0 +1,4392 @@
+[
+  {
+    "seed": 0,
+    "view": "full",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.9368674890657698,
+      "0.25": 0.9428829421589757,
+      "0.5": 0.9476203401113136,
+      "0.75": 0.948111512580675,
+      "1.0": 0.9465287115056086
+    },
+    "selected_weight": 0.75,
+    "selected_hierarchy_features": [
+      "ACK Flag Count",
+      "Active Max",
+      "Active Mean",
+      "Active Min",
+      "Active Std",
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "Bwd IAT Max",
+      "Bwd IAT Mean",
+      "Bwd IAT Min",
+      "Bwd IAT Std",
+      "Bwd IAT Total",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Std",
+      "Down/Up Ratio",
+      "FIN Flag Count",
+      "Flow Bytes/s",
+      "Flow Duration",
+      "Flow IAT Max",
+      "Flow IAT Mean",
+      "Flow IAT Min",
+      "Flow IAT Std",
+      "Flow Packets/s",
+      "Fwd IAT Max",
+      "Fwd IAT Mean",
+      "Fwd IAT Min",
+      "Fwd IAT Std",
+      "Fwd IAT Total",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Std",
+      "Idle Max",
+      "Idle Mean",
+      "Idle Min",
+      "Idle Std",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "PSH Flag Count",
+      "Packet Length Variance",
+      "RST Flag Count",
+      "SYN Flag Count",
+      "Total Bwd Packets",
+      "Total Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Total Length of Fwd Packets",
+      "client_latency",
+      "http_req_has_cookie",
+      "http_req_has_lang",
+      "http_req_has_referer",
+      "http_req_version",
+      "server_latency",
+      "tls_client_alpn_info",
+      "tls_client_cipher_count",
+      "tls_client_ptype",
+      "tls_client_sni_presence",
+      "tls_client_version",
+      "tls_server_alpn_info",
+      "tls_server_cipher_val",
+      "tls_server_ptype",
+      "tls_server_version"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.998,
+        "f1-score": 0.998998998998999,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9960159362549801,
+        "recall": 1.0,
+        "f1-score": 0.998003992015968,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8744007670182167,
+        "recall": 0.912,
+        "f1-score": 0.8928046989720998,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9384133611691023,
+        "recall": 0.899,
+        "f1-score": 0.9182839632277835,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9428284854563691,
+        "recall": 0.94,
+        "f1-score": 0.9414121181772658,
+        "support": 1000
+      },
+      "accuracy": 0.9498,
+      "macro avg": {
+        "precision": 0.9503317099797336,
+        "recall": 0.9498000000000001,
+        "f1-score": 0.9499007542784232,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9503317099797336,
+        "recall": 0.9498,
+        "f1-score": 0.9499007542784234,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 0,
+    "view": "full",
+    "use_jsd": false,
+    "validation_f1_by_weight": {
+      "0.0": 0.9369462652452587,
+      "0.25": 0.9433196185126537,
+      "0.5": 0.9476740237362069,
+      "0.75": 0.9476918021887808,
+      "1.0": 0.9465287115056086
+    },
+    "selected_weight": 0.75,
+    "selected_hierarchy_features": [
+      "Total Fwd Packets",
+      "Total Bwd Packets",
+      "Total Length of Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Std",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Std",
+      "Packet Length Variance",
+      "FIN Flag Count",
+      "SYN Flag Count",
+      "RST Flag Count",
+      "PSH Flag Count",
+      "ACK Flag Count",
+      "Down/Up Ratio",
+      "Average Packet Size",
+      "Avg Fwd Segment Size",
+      "Avg Bwd Segment Size",
+      "Init_Win_bytes_forward",
+      "Init_Win_bytes_backward",
+      "Flow Duration",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Total",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Total",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min",
+      "client_latency",
+      "server_latency",
+      "http_method",
+      "http_path_len",
+      "http_req_method_short",
+      "http_req_version",
+      "http_req_has_cookie",
+      "http_req_has_referer",
+      "http_req_header_count",
+      "http_req_has_lang",
+      "tls_client_ptype",
+      "tls_client_version",
+      "tls_client_sni_presence",
+      "tls_client_cipher_count",
+      "tls_client_extension_count",
+      "tls_client_alpn_info",
+      "tls_server_ptype",
+      "tls_server_version",
+      "tls_server_cipher_val",
+      "tls_server_extension_count",
+      "tls_server_alpn_info"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.996,
+        "f1-score": 0.9979959919839679,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9960159362549801,
+        "recall": 1.0,
+        "f1-score": 0.998003992015968,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8745210727969349,
+        "recall": 0.913,
+        "f1-score": 0.8933463796477495,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9384133611691023,
+        "recall": 0.899,
+        "f1-score": 0.9182839632277835,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9428857715430862,
+        "recall": 0.941,
+        "f1-score": 0.9419419419419419,
+        "support": 1000
+      },
+      "accuracy": 0.9498,
+      "macro avg": {
+        "precision": 0.9503672283528207,
+        "recall": 0.9498,
+        "f1-score": 0.9499144537634822,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9503672283528207,
+        "recall": 0.9498,
+        "f1-score": 0.9499144537634822,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 0,
+    "view": "pt",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.9405653949231183,
+      "0.25": 0.9449012518769134,
+      "0.5": 0.9476799229881866,
+      "0.75": 0.9485381091064212,
+      "1.0": 0.9481282558253123
+    },
+    "selected_weight": 0.75,
+    "selected_hierarchy_features": [
+      "ACK Flag Count",
+      "Active Max",
+      "Active Mean",
+      "Active Min",
+      "Active Std",
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "Bwd IAT Max",
+      "Bwd IAT Mean",
+      "Bwd IAT Min",
+      "Bwd IAT Std",
+      "Bwd IAT Total",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Std",
+      "Down/Up Ratio",
+      "FIN Flag Count",
+      "Flow Bytes/s",
+      "Flow Duration",
+      "Flow IAT Max",
+      "Flow IAT Mean",
+      "Flow IAT Min",
+      "Flow IAT Std",
+      "Flow Packets/s",
+      "Fwd IAT Max",
+      "Fwd IAT Mean",
+      "Fwd IAT Min",
+      "Fwd IAT Std",
+      "Fwd IAT Total",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Std",
+      "Idle Max",
+      "Idle Mean",
+      "Idle Min",
+      "Idle Std",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "PSH Flag Count",
+      "Packet Length Variance",
+      "RST Flag Count",
+      "SYN Flag Count",
+      "Total Bwd Packets",
+      "Total Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Total Length of Fwd Packets",
+      "client_latency",
+      "server_latency"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.996,
+        "f1-score": 0.9979959919839679,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9960159362549801,
+        "recall": 1.0,
+        "f1-score": 0.998003992015968,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8711832061068703,
+        "recall": 0.913,
+        "f1-score": 0.8916015625,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9361256544502617,
+        "recall": 0.894,
+        "f1-score": 0.9145780051150895,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9418254764292878,
+        "recall": 0.939,
+        "f1-score": 0.9404106159238858,
+        "support": 1000
+      },
+      "accuracy": 0.9484,
+      "macro avg": {
+        "precision": 0.9490300546482799,
+        "recall": 0.9484,
+        "f1-score": 0.9485180335077823,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9490300546482798,
+        "recall": 0.9484,
+        "f1-score": 0.9485180335077823,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 0,
+    "view": "as",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.20682275697605998,
+      "0.25": 0.20682275697605998,
+      "0.5": 0.20682275697605998,
+      "0.75": 0.20682275697605998,
+      "1.0": 0.20682275697605998
+    },
+    "selected_weight": 0.0,
+    "selected_hierarchy_features": [
+      "http_req_has_cookie",
+      "http_req_has_lang",
+      "http_req_has_referer",
+      "http_req_header_count",
+      "http_req_version",
+      "tls_client_alpn_info",
+      "tls_client_cipher_count",
+      "tls_client_ptype",
+      "tls_client_sni_presence",
+      "tls_client_version",
+      "tls_server_alpn_info",
+      "tls_server_cipher_val",
+      "tls_server_ptype",
+      "tls_server_version"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.444,
+        "f1-score": 0.6149584487534626,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.21949078138718173,
+        "recall": 1.0,
+        "f1-score": 0.35997120230381563,
+        "support": 1000
+      },
+      "accuracy": 0.2888,
+      "macro avg": {
+        "precision": 0.24389815627743636,
+        "recall": 0.2888,
+        "f1-score": 0.19498593021145566,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.24389815627743633,
+        "recall": 0.2888,
+        "f1-score": 0.19498593021145563,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 1,
+    "view": "full",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.9381054941337243,
+      "0.25": 0.943357416741151,
+      "0.5": 0.947331491487701,
+      "0.75": 0.9477586503817503,
+      "1.0": 0.947395179844353
+    },
+    "selected_weight": 0.75,
+    "selected_hierarchy_features": [
+      "ACK Flag Count",
+      "Active Max",
+      "Active Mean",
+      "Active Min",
+      "Active Std",
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "Bwd IAT Max",
+      "Bwd IAT Mean",
+      "Bwd IAT Min",
+      "Bwd IAT Std",
+      "Bwd IAT Total",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Std",
+      "Down/Up Ratio",
+      "FIN Flag Count",
+      "Flow Bytes/s",
+      "Flow Duration",
+      "Flow IAT Max",
+      "Flow IAT Mean",
+      "Flow IAT Min",
+      "Flow IAT Std",
+      "Flow Packets/s",
+      "Fwd IAT Max",
+      "Fwd IAT Mean",
+      "Fwd IAT Min",
+      "Fwd IAT Std",
+      "Fwd IAT Total",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Std",
+      "Idle Max",
+      "Idle Mean",
+      "Idle Min",
+      "Idle Std",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "PSH Flag Count",
+      "Packet Length Variance",
+      "RST Flag Count",
+      "SYN Flag Count",
+      "Total Bwd Packets",
+      "Total Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Total Length of Fwd Packets",
+      "client_latency",
+      "http_req_has_cookie",
+      "http_req_has_lang",
+      "http_req_has_referer",
+      "http_req_version",
+      "server_latency",
+      "tls_client_alpn_info",
+      "tls_client_cipher_count",
+      "tls_client_ptype",
+      "tls_client_sni_presence",
+      "tls_client_version",
+      "tls_server_alpn_info",
+      "tls_server_cipher_val",
+      "tls_server_ptype",
+      "tls_server_version"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9960159362549801,
+        "recall": 1.0,
+        "f1-score": 0.998003992015968,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8722592945662536,
+        "recall": 0.915,
+        "f1-score": 0.8931185944363104,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9373040752351097,
+        "recall": 0.897,
+        "f1-score": 0.9167092488502812,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.94662638469285,
+        "recall": 0.94,
+        "f1-score": 0.9433015554440543,
+        "support": 1000
+      },
+      "accuracy": 0.9498,
+      "macro avg": {
+        "precision": 0.9504411381498388,
+        "recall": 0.9498000000000001,
+        "f1-score": 0.9499262274733088,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9504411381498387,
+        "recall": 0.9498,
+        "f1-score": 0.9499262274733088,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 1,
+    "view": "full",
+    "use_jsd": false,
+    "validation_f1_by_weight": {
+      "0.0": 0.9378301536302629,
+      "0.25": 0.9441272713923141,
+      "0.5": 0.9477538261954104,
+      "0.75": 0.9493617841443929,
+      "1.0": 0.947395179844353
+    },
+    "selected_weight": 0.75,
+    "selected_hierarchy_features": [
+      "Total Fwd Packets",
+      "Total Bwd Packets",
+      "Total Length of Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Std",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Std",
+      "Packet Length Variance",
+      "FIN Flag Count",
+      "SYN Flag Count",
+      "RST Flag Count",
+      "PSH Flag Count",
+      "ACK Flag Count",
+      "Down/Up Ratio",
+      "Average Packet Size",
+      "Avg Fwd Segment Size",
+      "Avg Bwd Segment Size",
+      "Init_Win_bytes_forward",
+      "Init_Win_bytes_backward",
+      "Flow Duration",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Total",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Total",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min",
+      "client_latency",
+      "server_latency",
+      "http_method",
+      "http_path_len",
+      "http_req_method_short",
+      "http_req_version",
+      "http_req_has_cookie",
+      "http_req_has_referer",
+      "http_req_header_count",
+      "http_req_has_lang",
+      "tls_client_ptype",
+      "tls_client_version",
+      "tls_client_sni_presence",
+      "tls_client_cipher_count",
+      "tls_client_extension_count",
+      "tls_client_alpn_info",
+      "tls_server_ptype",
+      "tls_server_version",
+      "tls_server_cipher_val",
+      "tls_server_extension_count",
+      "tls_server_alpn_info"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.996,
+        "f1-score": 0.9979959919839679,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9960159362549801,
+        "recall": 1.0,
+        "f1-score": 0.998003992015968,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8732125834127741,
+        "recall": 0.916,
+        "f1-score": 0.8940946803318692,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9403765690376569,
+        "recall": 0.899,
+        "f1-score": 0.9192229038854806,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9457286432160804,
+        "recall": 0.941,
+        "f1-score": 0.9433583959899748,
+        "support": 1000
+      },
+      "accuracy": 0.9504,
+      "macro avg": {
+        "precision": 0.9510667463842983,
+        "recall": 0.9503999999999999,
+        "f1-score": 0.9505351928414522,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9510667463842983,
+        "recall": 0.9504,
+        "f1-score": 0.9505351928414523,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 1,
+    "view": "pt",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.9370714399319313,
+      "0.25": 0.9425644110009447,
+      "0.5": 0.9461578071648123,
+      "0.75": 0.9485481039309673,
+      "1.0": 0.9501713046848372
+    },
+    "selected_weight": 1.0,
+    "selected_hierarchy_features": [
+      "ACK Flag Count",
+      "Active Max",
+      "Active Mean",
+      "Active Min",
+      "Active Std",
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "Bwd IAT Max",
+      "Bwd IAT Mean",
+      "Bwd IAT Min",
+      "Bwd IAT Std",
+      "Bwd IAT Total",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Std",
+      "Down/Up Ratio",
+      "FIN Flag Count",
+      "Flow Bytes/s",
+      "Flow Duration",
+      "Flow IAT Max",
+      "Flow IAT Mean",
+      "Flow IAT Min",
+      "Flow IAT Std",
+      "Flow Packets/s",
+      "Fwd IAT Max",
+      "Fwd IAT Mean",
+      "Fwd IAT Min",
+      "Fwd IAT Std",
+      "Fwd IAT Total",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Std",
+      "Idle Max",
+      "Idle Mean",
+      "Idle Min",
+      "Idle Std",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "PSH Flag Count",
+      "Packet Length Variance",
+      "RST Flag Count",
+      "SYN Flag Count",
+      "Total Bwd Packets",
+      "Total Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Total Length of Fwd Packets",
+      "client_latency",
+      "server_latency"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970089730807578,
+        "recall": 1.0,
+        "f1-score": 0.9985022466300548,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8758357211079274,
+        "recall": 0.917,
+        "f1-score": 0.8959452857840744,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9403141361256544,
+        "recall": 0.898,
+        "f1-score": 0.9186700767263427,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9448897795591182,
+        "recall": 0.943,
+        "f1-score": 0.943943943943944,
+        "support": 1000
+      },
+      "accuracy": 0.951,
+      "macro avg": {
+        "precision": 0.9516097219746916,
+        "recall": 0.951,
+        "f1-score": 0.9511118599408691,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9516097219746914,
+        "recall": 0.951,
+        "f1-score": 0.9511118599408692,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 1,
+    "view": "as",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.20682275697605998,
+      "0.25": 0.20682275697605998,
+      "0.5": 0.20682275697605998,
+      "0.75": 0.20682275697605998,
+      "1.0": 0.20682275697605998
+    },
+    "selected_weight": 0.0,
+    "selected_hierarchy_features": [
+      "http_req_has_cookie",
+      "http_req_has_lang",
+      "http_req_has_referer",
+      "http_req_header_count",
+      "http_req_version",
+      "tls_client_alpn_info",
+      "tls_client_cipher_count",
+      "tls_client_ptype",
+      "tls_client_sni_presence",
+      "tls_client_version",
+      "tls_server_alpn_info",
+      "tls_server_cipher_val",
+      "tls_server_ptype",
+      "tls_server_version"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.444,
+        "f1-score": 0.6149584487534626,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.21949078138718173,
+        "recall": 1.0,
+        "f1-score": 0.35997120230381563,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "accuracy": 0.2888,
+      "macro avg": {
+        "precision": 0.24389815627743636,
+        "recall": 0.2888,
+        "f1-score": 0.19498593021145566,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.24389815627743633,
+        "recall": 0.2888,
+        "f1-score": 0.19498593021145563,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 2,
+    "view": "full",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.9365760699053993,
+      "0.25": 0.9413504817846785,
+      "0.5": 0.9472480948091218,
+      "0.75": 0.9469001337938877,
+      "1.0": 0.9481312007208832
+    },
+    "selected_weight": 1.0,
+    "selected_hierarchy_features": [
+      "ACK Flag Count",
+      "Active Max",
+      "Active Mean",
+      "Active Min",
+      "Active Std",
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "Bwd IAT Max",
+      "Bwd IAT Mean",
+      "Bwd IAT Min",
+      "Bwd IAT Std",
+      "Bwd IAT Total",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Std",
+      "Down/Up Ratio",
+      "FIN Flag Count",
+      "Flow Bytes/s",
+      "Flow Duration",
+      "Flow IAT Max",
+      "Flow IAT Mean",
+      "Flow IAT Min",
+      "Flow IAT Std",
+      "Flow Packets/s",
+      "Fwd IAT Max",
+      "Fwd IAT Mean",
+      "Fwd IAT Min",
+      "Fwd IAT Std",
+      "Fwd IAT Total",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Std",
+      "Idle Max",
+      "Idle Mean",
+      "Idle Min",
+      "Idle Std",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "PSH Flag Count",
+      "Packet Length Variance",
+      "RST Flag Count",
+      "SYN Flag Count",
+      "Total Bwd Packets",
+      "Total Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Total Length of Fwd Packets",
+      "client_latency",
+      "http_req_has_cookie",
+      "http_req_has_lang",
+      "http_req_has_referer",
+      "http_req_version",
+      "server_latency",
+      "tls_client_alpn_info",
+      "tls_client_cipher_count",
+      "tls_client_ptype",
+      "tls_client_sni_presence",
+      "tls_client_version",
+      "tls_server_alpn_info",
+      "tls_server_cipher_val",
+      "tls_server_ptype",
+      "tls_server_version"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970089730807578,
+        "recall": 1.0,
+        "f1-score": 0.9985022466300548,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8759469696969697,
+        "recall": 0.925,
+        "f1-score": 0.8998054474708171,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9442691903259727,
+        "recall": 0.898,
+        "f1-score": 0.920553562275756,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9476334340382678,
+        "recall": 0.941,
+        "f1-score": 0.9443050677370798,
+        "support": 1000
+      },
+      "accuracy": 0.9522,
+      "macro avg": {
+        "precision": 0.9529717134283937,
+        "recall": 0.9522,
+        "f1-score": 0.9523328141467274,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9529717134283937,
+        "recall": 0.9522,
+        "f1-score": 0.9523328141467274,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 2,
+    "view": "full",
+    "use_jsd": false,
+    "validation_f1_by_weight": {
+      "0.0": 0.9350657920963972,
+      "0.25": 0.9437704615107465,
+      "0.5": 0.9468532223372751,
+      "0.75": 0.9472711148486784,
+      "1.0": 0.9481312007208832
+    },
+    "selected_weight": 1.0,
+    "selected_hierarchy_features": [
+      "Total Fwd Packets",
+      "Total Bwd Packets",
+      "Total Length of Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Std",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Std",
+      "Packet Length Variance",
+      "FIN Flag Count",
+      "SYN Flag Count",
+      "RST Flag Count",
+      "PSH Flag Count",
+      "ACK Flag Count",
+      "Down/Up Ratio",
+      "Average Packet Size",
+      "Avg Fwd Segment Size",
+      "Avg Bwd Segment Size",
+      "Init_Win_bytes_forward",
+      "Init_Win_bytes_backward",
+      "Flow Duration",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Total",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Total",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min",
+      "client_latency",
+      "server_latency",
+      "http_method",
+      "http_path_len",
+      "http_req_method_short",
+      "http_req_version",
+      "http_req_has_cookie",
+      "http_req_has_referer",
+      "http_req_header_count",
+      "http_req_has_lang",
+      "tls_client_ptype",
+      "tls_client_version",
+      "tls_client_sni_presence",
+      "tls_client_cipher_count",
+      "tls_client_extension_count",
+      "tls_client_alpn_info",
+      "tls_server_ptype",
+      "tls_server_version",
+      "tls_server_cipher_val",
+      "tls_server_extension_count",
+      "tls_server_alpn_info"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970089730807578,
+        "recall": 1.0,
+        "f1-score": 0.9985022466300548,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8759469696969697,
+        "recall": 0.925,
+        "f1-score": 0.8998054474708171,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9442691903259727,
+        "recall": 0.898,
+        "f1-score": 0.920553562275756,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9476334340382678,
+        "recall": 0.941,
+        "f1-score": 0.9443050677370798,
+        "support": 1000
+      },
+      "accuracy": 0.9522,
+      "macro avg": {
+        "precision": 0.9529717134283937,
+        "recall": 0.9522,
+        "f1-score": 0.9523328141467274,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9529717134283937,
+        "recall": 0.9522,
+        "f1-score": 0.9523328141467274,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 2,
+    "view": "pt",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.9377433931345136,
+      "0.25": 0.9433436497220782,
+      "0.5": 0.9453565353402986,
+      "0.75": 0.9469181526419493,
+      "1.0": 0.9473081596394504
+    },
+    "selected_weight": 1.0,
+    "selected_hierarchy_features": [
+      "ACK Flag Count",
+      "Active Max",
+      "Active Mean",
+      "Active Min",
+      "Active Std",
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "Bwd IAT Max",
+      "Bwd IAT Mean",
+      "Bwd IAT Min",
+      "Bwd IAT Std",
+      "Bwd IAT Total",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Std",
+      "Down/Up Ratio",
+      "FIN Flag Count",
+      "Flow Bytes/s",
+      "Flow Duration",
+      "Flow IAT Max",
+      "Flow IAT Mean",
+      "Flow IAT Min",
+      "Flow IAT Std",
+      "Flow Packets/s",
+      "Fwd IAT Max",
+      "Fwd IAT Mean",
+      "Fwd IAT Min",
+      "Fwd IAT Std",
+      "Fwd IAT Total",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Std",
+      "Idle Max",
+      "Idle Mean",
+      "Idle Min",
+      "Idle Std",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "PSH Flag Count",
+      "Packet Length Variance",
+      "RST Flag Count",
+      "SYN Flag Count",
+      "Total Bwd Packets",
+      "Total Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Total Length of Fwd Packets",
+      "client_latency",
+      "server_latency"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970089730807578,
+        "recall": 1.0,
+        "f1-score": 0.9985022466300548,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8726235741444867,
+        "recall": 0.918,
+        "f1-score": 0.8947368421052632,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9411764705882353,
+        "recall": 0.896,
+        "f1-score": 0.9180327868852459,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9447791164658634,
+        "recall": 0.941,
+        "f1-score": 0.9428857715430861,
+        "support": 1000
+      },
+      "accuracy": 0.9504,
+      "macro avg": {
+        "precision": 0.9511176268558685,
+        "recall": 0.9503999999999999,
+        "f1-score": 0.9505310787567159,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9511176268558685,
+        "recall": 0.9504,
+        "f1-score": 0.9505310787567162,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 2,
+    "view": "as",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.20682275697605998,
+      "0.25": 0.20682275697605998,
+      "0.5": 0.20682275697605998,
+      "0.75": 0.20682275697605998,
+      "1.0": 0.20682275697605998
+    },
+    "selected_weight": 0.0,
+    "selected_hierarchy_features": [
+      "http_req_has_cookie",
+      "http_req_has_lang",
+      "http_req_has_referer",
+      "http_req_header_count",
+      "http_req_version",
+      "tls_client_alpn_info",
+      "tls_client_cipher_count",
+      "tls_client_ptype",
+      "tls_client_sni_presence",
+      "tls_client_version",
+      "tls_server_alpn_info",
+      "tls_server_cipher_val",
+      "tls_server_ptype",
+      "tls_server_version"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.444,
+        "f1-score": 0.6149584487534626,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.21949078138718173,
+        "recall": 1.0,
+        "f1-score": 0.35997120230381563,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "accuracy": 0.2888,
+      "macro avg": {
+        "precision": 0.24389815627743636,
+        "recall": 0.2888,
+        "f1-score": 0.19498593021145566,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.24389815627743633,
+        "recall": 0.2888,
+        "f1-score": 0.19498593021145563,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 3,
+    "view": "full",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.9349042702460079,
+      "0.25": 0.9413163348108377,
+      "0.5": 0.9468307699194718,
+      "0.75": 0.9485084782550335,
+      "1.0": 0.9477464839090036
+    },
+    "selected_weight": 0.75,
+    "selected_hierarchy_features": [
+      "ACK Flag Count",
+      "Active Max",
+      "Active Mean",
+      "Active Min",
+      "Active Std",
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "Bwd IAT Max",
+      "Bwd IAT Mean",
+      "Bwd IAT Min",
+      "Bwd IAT Std",
+      "Bwd IAT Total",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Std",
+      "Down/Up Ratio",
+      "FIN Flag Count",
+      "Flow Bytes/s",
+      "Flow Duration",
+      "Flow IAT Max",
+      "Flow IAT Mean",
+      "Flow IAT Min",
+      "Flow IAT Std",
+      "Flow Packets/s",
+      "Fwd IAT Max",
+      "Fwd IAT Mean",
+      "Fwd IAT Min",
+      "Fwd IAT Std",
+      "Fwd IAT Total",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Std",
+      "Idle Max",
+      "Idle Mean",
+      "Idle Min",
+      "Idle Std",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "PSH Flag Count",
+      "Packet Length Variance",
+      "RST Flag Count",
+      "SYN Flag Count",
+      "Total Bwd Packets",
+      "Total Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Total Length of Fwd Packets",
+      "client_latency",
+      "http_req_has_cookie",
+      "http_req_has_lang",
+      "http_req_has_referer",
+      "http_req_version",
+      "server_latency",
+      "tls_client_alpn_info",
+      "tls_client_cipher_count",
+      "tls_client_ptype",
+      "tls_client_sni_presence",
+      "tls_client_version",
+      "tls_server_alpn_info",
+      "tls_server_cipher_val",
+      "tls_server_ptype",
+      "tls_server_version"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9960159362549801,
+        "recall": 1.0,
+        "f1-score": 0.998003992015968,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8778625954198473,
+        "recall": 0.92,
+        "f1-score": 0.8984375,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9422875131164743,
+        "recall": 0.898,
+        "f1-score": 0.9196108550947261,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9458917835671342,
+        "recall": 0.944,
+        "f1-score": 0.9449449449449449,
+        "support": 1000
+      },
+      "accuracy": 0.9518,
+      "macro avg": {
+        "precision": 0.9524115656716872,
+        "recall": 0.9518000000000001,
+        "f1-score": 0.9518990077351137,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.952411565671687,
+        "recall": 0.9518,
+        "f1-score": 0.9518990077351138,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 3,
+    "view": "full",
+    "use_jsd": false,
+    "validation_f1_by_weight": {
+      "0.0": 0.936940153465047,
+      "0.25": 0.9425634616253733,
+      "0.5": 0.9460741391750707,
+      "0.75": 0.9469270980721074,
+      "1.0": 0.9477464839090036
+    },
+    "selected_weight": 1.0,
+    "selected_hierarchy_features": [
+      "Total Fwd Packets",
+      "Total Bwd Packets",
+      "Total Length of Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Std",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Std",
+      "Packet Length Variance",
+      "FIN Flag Count",
+      "SYN Flag Count",
+      "RST Flag Count",
+      "PSH Flag Count",
+      "ACK Flag Count",
+      "Down/Up Ratio",
+      "Average Packet Size",
+      "Avg Fwd Segment Size",
+      "Avg Bwd Segment Size",
+      "Init_Win_bytes_forward",
+      "Init_Win_bytes_backward",
+      "Flow Duration",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Total",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Total",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min",
+      "client_latency",
+      "server_latency",
+      "http_method",
+      "http_path_len",
+      "http_req_method_short",
+      "http_req_version",
+      "http_req_has_cookie",
+      "http_req_has_referer",
+      "http_req_header_count",
+      "http_req_has_lang",
+      "tls_client_ptype",
+      "tls_client_version",
+      "tls_client_sni_presence",
+      "tls_client_cipher_count",
+      "tls_client_extension_count",
+      "tls_client_alpn_info",
+      "tls_server_ptype",
+      "tls_server_version",
+      "tls_server_cipher_val",
+      "tls_server_extension_count",
+      "tls_server_alpn_info"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970089730807578,
+        "recall": 1.0,
+        "f1-score": 0.9985022466300548,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8804971319311663,
+        "recall": 0.921,
+        "f1-score": 0.9002932551319648,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9442691903259727,
+        "recall": 0.898,
+        "f1-score": 0.920553562275756,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.942173479561316,
+        "recall": 0.945,
+        "f1-score": 0.9435846230654019,
+        "support": 1000
+      },
+      "accuracy": 0.9522,
+      "macro avg": {
+        "precision": 0.9527897549798425,
+        "recall": 0.9522,
+        "f1-score": 0.9522862867446215,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9527897549798424,
+        "recall": 0.9522,
+        "f1-score": 0.9522862867446216,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 3,
+    "view": "pt",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.937757501995458,
+      "0.25": 0.9440567434522791,
+      "0.5": 0.9485167785852052,
+      "0.75": 0.9469281037774797,
+      "1.0": 0.9497407285779357
+    },
+    "selected_weight": 1.0,
+    "selected_hierarchy_features": [
+      "ACK Flag Count",
+      "Active Max",
+      "Active Mean",
+      "Active Min",
+      "Active Std",
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "Bwd IAT Max",
+      "Bwd IAT Mean",
+      "Bwd IAT Min",
+      "Bwd IAT Std",
+      "Bwd IAT Total",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Std",
+      "Down/Up Ratio",
+      "FIN Flag Count",
+      "Flow Bytes/s",
+      "Flow Duration",
+      "Flow IAT Max",
+      "Flow IAT Mean",
+      "Flow IAT Min",
+      "Flow IAT Std",
+      "Flow Packets/s",
+      "Fwd IAT Max",
+      "Fwd IAT Mean",
+      "Fwd IAT Min",
+      "Fwd IAT Std",
+      "Fwd IAT Total",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Std",
+      "Idle Max",
+      "Idle Mean",
+      "Idle Min",
+      "Idle Std",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "PSH Flag Count",
+      "Packet Length Variance",
+      "RST Flag Count",
+      "SYN Flag Count",
+      "Total Bwd Packets",
+      "Total Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Total Length of Fwd Packets",
+      "client_latency",
+      "server_latency"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.998,
+        "f1-score": 0.998998998998999,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970089730807578,
+        "recall": 1.0,
+        "f1-score": 0.9985022466300548,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8833652007648184,
+        "recall": 0.924,
+        "f1-score": 0.9032258064516129,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9424686192468619,
+        "recall": 0.901,
+        "f1-score": 0.9212678936605317,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9468405215646941,
+        "recall": 0.944,
+        "f1-score": 0.9454181271907862,
+        "support": 1000
+      },
+      "accuracy": 0.9534,
+      "macro avg": {
+        "precision": 0.9539366629314265,
+        "recall": 0.9534,
+        "f1-score": 0.9534826145863968,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9539366629314265,
+        "recall": 0.9534,
+        "f1-score": 0.953482614586397,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 3,
+    "view": "as",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.20682275697605998,
+      "0.25": 0.20682275697605998,
+      "0.5": 0.20682275697605998,
+      "0.75": 0.20682275697605998,
+      "1.0": 0.20682275697605998
+    },
+    "selected_weight": 0.0,
+    "selected_hierarchy_features": [
+      "http_req_has_cookie",
+      "http_req_has_lang",
+      "http_req_has_referer",
+      "http_req_header_count",
+      "http_req_version",
+      "tls_client_alpn_info",
+      "tls_client_cipher_count",
+      "tls_client_ptype",
+      "tls_client_sni_presence",
+      "tls_client_version",
+      "tls_server_alpn_info",
+      "tls_server_cipher_val",
+      "tls_server_ptype",
+      "tls_server_version"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.444,
+        "f1-score": 0.6149584487534626,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.21949078138718173,
+        "recall": 1.0,
+        "f1-score": 0.35997120230381563,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "accuracy": 0.2888,
+      "macro avg": {
+        "precision": 0.24389815627743636,
+        "recall": 0.2888,
+        "f1-score": 0.19498593021145566,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.24389815627743633,
+        "recall": 0.2888,
+        "f1-score": 0.19498593021145563,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 4,
+    "view": "full",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.9393141052063834,
+      "0.25": 0.9440956377505657,
+      "0.5": 0.947671158668802,
+      "0.75": 0.9488984210318886,
+      "1.0": 0.9492972809926543
+    },
+    "selected_weight": 1.0,
+    "selected_hierarchy_features": [
+      "ACK Flag Count",
+      "Active Max",
+      "Active Mean",
+      "Active Min",
+      "Active Std",
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "Bwd IAT Max",
+      "Bwd IAT Mean",
+      "Bwd IAT Min",
+      "Bwd IAT Std",
+      "Bwd IAT Total",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Std",
+      "Down/Up Ratio",
+      "FIN Flag Count",
+      "Flow Bytes/s",
+      "Flow Duration",
+      "Flow IAT Max",
+      "Flow IAT Mean",
+      "Flow IAT Min",
+      "Flow IAT Std",
+      "Flow Packets/s",
+      "Fwd IAT Max",
+      "Fwd IAT Mean",
+      "Fwd IAT Min",
+      "Fwd IAT Std",
+      "Fwd IAT Total",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Std",
+      "Idle Max",
+      "Idle Mean",
+      "Idle Min",
+      "Idle Std",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "PSH Flag Count",
+      "Packet Length Variance",
+      "RST Flag Count",
+      "SYN Flag Count",
+      "Total Bwd Packets",
+      "Total Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Total Length of Fwd Packets",
+      "client_latency",
+      "http_req_has_cookie",
+      "http_req_has_lang",
+      "http_req_has_referer",
+      "http_req_version",
+      "server_latency",
+      "tls_client_alpn_info",
+      "tls_client_cipher_count",
+      "tls_client_ptype",
+      "tls_client_sni_presence",
+      "tls_client_version",
+      "tls_server_alpn_info",
+      "tls_server_cipher_val",
+      "tls_server_ptype",
+      "tls_server_version"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970089730807578,
+        "recall": 1.0,
+        "f1-score": 0.9985022466300548,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8795411089866156,
+        "recall": 0.92,
+        "f1-score": 0.8993157380254154,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9394572025052192,
+        "recall": 0.9,
+        "f1-score": 0.9193054136874362,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9457831325301205,
+        "recall": 0.942,
+        "f1-score": 0.9438877755511021,
+        "support": 1000
+      },
+      "accuracy": 0.9518,
+      "macro avg": {
+        "precision": 0.9523580834205425,
+        "recall": 0.9517999999999999,
+        "f1-score": 0.9519017841027878,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9523580834205426,
+        "recall": 0.9518,
+        "f1-score": 0.9519017841027877,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 4,
+    "view": "full",
+    "use_jsd": false,
+    "validation_f1_by_weight": {
+      "0.0": 0.9389165937413659,
+      "0.25": 0.9440896843587765,
+      "0.5": 0.9480603414947817,
+      "0.75": 0.948500203708659,
+      "1.0": 0.9492972809926543
+    },
+    "selected_weight": 1.0,
+    "selected_hierarchy_features": [
+      "Total Fwd Packets",
+      "Total Bwd Packets",
+      "Total Length of Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Std",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Std",
+      "Packet Length Variance",
+      "FIN Flag Count",
+      "SYN Flag Count",
+      "RST Flag Count",
+      "PSH Flag Count",
+      "ACK Flag Count",
+      "Down/Up Ratio",
+      "Average Packet Size",
+      "Avg Fwd Segment Size",
+      "Avg Bwd Segment Size",
+      "Init_Win_bytes_forward",
+      "Init_Win_bytes_backward",
+      "Flow Duration",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Total",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Total",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min",
+      "client_latency",
+      "server_latency",
+      "http_method",
+      "http_path_len",
+      "http_req_method_short",
+      "http_req_version",
+      "http_req_has_cookie",
+      "http_req_has_referer",
+      "http_req_header_count",
+      "http_req_has_lang",
+      "tls_client_ptype",
+      "tls_client_version",
+      "tls_client_sni_presence",
+      "tls_client_cipher_count",
+      "tls_client_extension_count",
+      "tls_client_alpn_info",
+      "tls_server_ptype",
+      "tls_server_version",
+      "tls_server_cipher_val",
+      "tls_server_extension_count",
+      "tls_server_alpn_info"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970089730807578,
+        "recall": 1.0,
+        "f1-score": 0.9985022466300548,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8795411089866156,
+        "recall": 0.92,
+        "f1-score": 0.8993157380254154,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9394572025052192,
+        "recall": 0.9,
+        "f1-score": 0.9193054136874362,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9457831325301205,
+        "recall": 0.942,
+        "f1-score": 0.9438877755511021,
+        "support": 1000
+      },
+      "accuracy": 0.9518,
+      "macro avg": {
+        "precision": 0.9523580834205425,
+        "recall": 0.9517999999999999,
+        "f1-score": 0.9519017841027878,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9523580834205426,
+        "recall": 0.9518,
+        "f1-score": 0.9519017841027877,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 4,
+    "view": "pt",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.9404928667328185,
+      "0.25": 0.9452640046496106,
+      "0.5": 0.9480950573987286,
+      "0.75": 0.948542763597333,
+      "1.0": 0.948913502143857
+    },
+    "selected_weight": 1.0,
+    "selected_hierarchy_features": [
+      "ACK Flag Count",
+      "Active Max",
+      "Active Mean",
+      "Active Min",
+      "Active Std",
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "Bwd IAT Max",
+      "Bwd IAT Mean",
+      "Bwd IAT Min",
+      "Bwd IAT Std",
+      "Bwd IAT Total",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Std",
+      "Down/Up Ratio",
+      "FIN Flag Count",
+      "Flow Bytes/s",
+      "Flow Duration",
+      "Flow IAT Max",
+      "Flow IAT Mean",
+      "Flow IAT Min",
+      "Flow IAT Std",
+      "Flow Packets/s",
+      "Fwd IAT Max",
+      "Fwd IAT Mean",
+      "Fwd IAT Min",
+      "Fwd IAT Std",
+      "Fwd IAT Total",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Std",
+      "Idle Max",
+      "Idle Mean",
+      "Idle Min",
+      "Idle Std",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "PSH Flag Count",
+      "Packet Length Variance",
+      "RST Flag Count",
+      "SYN Flag Count",
+      "Total Bwd Packets",
+      "Total Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Total Length of Fwd Packets",
+      "client_latency",
+      "server_latency"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970089730807578,
+        "recall": 1.0,
+        "f1-score": 0.9985022466300548,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8796561604584527,
+        "recall": 0.921,
+        "f1-score": 0.8998534440644846,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9453781512605042,
+        "recall": 0.9,
+        "f1-score": 0.9221311475409836,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9430569430569431,
+        "recall": 0.944,
+        "f1-score": 0.943528235882059,
+        "support": 1000
+      },
+      "accuracy": 0.9524,
+      "macro avg": {
+        "precision": 0.9530200455713317,
+        "recall": 0.9524000000000001,
+        "f1-score": 0.9525025641475023,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9530200455713315,
+        "recall": 0.9524,
+        "f1-score": 0.9525025641475023,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 4,
+    "view": "as",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.20682275697605998,
+      "0.25": 0.20682275697605998,
+      "0.5": 0.20682275697605998,
+      "0.75": 0.20682275697605998,
+      "1.0": 0.20682275697605998
+    },
+    "selected_weight": 0.0,
+    "selected_hierarchy_features": [
+      "http_req_has_cookie",
+      "http_req_has_lang",
+      "http_req_has_referer",
+      "http_req_header_count",
+      "http_req_version",
+      "tls_client_alpn_info",
+      "tls_client_cipher_count",
+      "tls_client_ptype",
+      "tls_client_sni_presence",
+      "tls_client_version",
+      "tls_server_alpn_info",
+      "tls_server_cipher_val",
+      "tls_server_ptype",
+      "tls_server_version"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.444,
+        "f1-score": 0.6149584487534626,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.21949078138718173,
+        "recall": 1.0,
+        "f1-score": 0.35997120230381563,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "accuracy": 0.2888,
+      "macro avg": {
+        "precision": 0.24389815627743636,
+        "recall": 0.2888,
+        "f1-score": 0.19498593021145566,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.24389815627743633,
+        "recall": 0.2888,
+        "f1-score": 0.19498593021145563,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 5,
+    "view": "full",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.9393640502866786,
+      "0.25": 0.9429469772584987,
+      "0.5": 0.9473516267150496,
+      "0.75": 0.9465338843092364,
+      "1.0": 0.946940053662576
+    },
+    "selected_weight": 0.5,
+    "selected_hierarchy_features": [
+      "ACK Flag Count",
+      "Active Max",
+      "Active Mean",
+      "Active Min",
+      "Active Std",
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "Bwd IAT Max",
+      "Bwd IAT Mean",
+      "Bwd IAT Min",
+      "Bwd IAT Std",
+      "Bwd IAT Total",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Std",
+      "Down/Up Ratio",
+      "FIN Flag Count",
+      "Flow Bytes/s",
+      "Flow Duration",
+      "Flow IAT Max",
+      "Flow IAT Mean",
+      "Flow IAT Min",
+      "Flow IAT Std",
+      "Flow Packets/s",
+      "Fwd IAT Max",
+      "Fwd IAT Mean",
+      "Fwd IAT Min",
+      "Fwd IAT Std",
+      "Fwd IAT Total",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Std",
+      "Idle Max",
+      "Idle Mean",
+      "Idle Min",
+      "Idle Std",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "PSH Flag Count",
+      "Packet Length Variance",
+      "RST Flag Count",
+      "SYN Flag Count",
+      "Total Bwd Packets",
+      "Total Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Total Length of Fwd Packets",
+      "client_latency",
+      "http_req_has_cookie",
+      "http_req_has_lang",
+      "http_req_has_referer",
+      "http_req_version",
+      "server_latency",
+      "tls_client_alpn_info",
+      "tls_client_cipher_count",
+      "tls_client_ptype",
+      "tls_client_sni_presence",
+      "tls_client_version",
+      "tls_server_alpn_info",
+      "tls_server_cipher_val",
+      "tls_server_ptype",
+      "tls_server_version"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.999,
+        "f1-score": 0.9994997498749374,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970089730807578,
+        "recall": 1.0,
+        "f1-score": 0.9985022466300548,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8683206106870229,
+        "recall": 0.91,
+        "f1-score": 0.888671875,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9401260504201681,
+        "recall": 0.895,
+        "f1-score": 0.9170081967213115,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9408817635270541,
+        "recall": 0.939,
+        "f1-score": 0.9399399399399399,
+        "support": 1000
+      },
+      "accuracy": 0.9486,
+      "macro avg": {
+        "precision": 0.9492674795430005,
+        "recall": 0.9486000000000001,
+        "f1-score": 0.9487244016332488,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9492674795430006,
+        "recall": 0.9486,
+        "f1-score": 0.9487244016332487,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 5,
+    "view": "full",
+    "use_jsd": false,
+    "validation_f1_by_weight": {
+      "0.0": 0.9365685459471121,
+      "0.25": 0.9430224972108183,
+      "0.5": 0.9457395162988401,
+      "0.75": 0.9469331397751655,
+      "1.0": 0.946940053662576
+    },
+    "selected_weight": 1.0,
+    "selected_hierarchy_features": [
+      "Total Fwd Packets",
+      "Total Bwd Packets",
+      "Total Length of Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Std",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Std",
+      "Packet Length Variance",
+      "FIN Flag Count",
+      "SYN Flag Count",
+      "RST Flag Count",
+      "PSH Flag Count",
+      "ACK Flag Count",
+      "Down/Up Ratio",
+      "Average Packet Size",
+      "Avg Fwd Segment Size",
+      "Avg Bwd Segment Size",
+      "Init_Win_bytes_forward",
+      "Init_Win_bytes_backward",
+      "Flow Duration",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Total",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Total",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min",
+      "client_latency",
+      "server_latency",
+      "http_method",
+      "http_path_len",
+      "http_req_method_short",
+      "http_req_version",
+      "http_req_has_cookie",
+      "http_req_has_referer",
+      "http_req_header_count",
+      "http_req_has_lang",
+      "tls_client_ptype",
+      "tls_client_version",
+      "tls_client_sni_presence",
+      "tls_client_cipher_count",
+      "tls_client_extension_count",
+      "tls_client_alpn_info",
+      "tls_server_ptype",
+      "tls_server_version",
+      "tls_server_cipher_val",
+      "tls_server_extension_count",
+      "tls_server_alpn_info"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970089730807578,
+        "recall": 1.0,
+        "f1-score": 0.9985022466300548,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8733459357277883,
+        "recall": 0.924,
+        "f1-score": 0.8979591836734694,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9470899470899471,
+        "recall": 0.895,
+        "f1-score": 0.9203084832904885,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9418254764292878,
+        "recall": 0.939,
+        "f1-score": 0.9404106159238858,
+        "support": 1000
+      },
+      "accuracy": 0.951,
+      "macro avg": {
+        "precision": 0.9518540664655563,
+        "recall": 0.951,
+        "f1-score": 0.9511356552275657,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9518540664655563,
+        "recall": 0.951,
+        "f1-score": 0.9511356552275656,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 5,
+    "view": "pt",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.9385417477489334,
+      "0.25": 0.9425419997360001,
+      "0.5": 0.9453348699004372,
+      "0.75": 0.9488980605189896,
+      "1.0": 0.949717372748621
+    },
+    "selected_weight": 1.0,
+    "selected_hierarchy_features": [
+      "ACK Flag Count",
+      "Active Max",
+      "Active Mean",
+      "Active Min",
+      "Active Std",
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "Bwd IAT Max",
+      "Bwd IAT Mean",
+      "Bwd IAT Min",
+      "Bwd IAT Std",
+      "Bwd IAT Total",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Std",
+      "Down/Up Ratio",
+      "FIN Flag Count",
+      "Flow Bytes/s",
+      "Flow Duration",
+      "Flow IAT Max",
+      "Flow IAT Mean",
+      "Flow IAT Min",
+      "Flow IAT Std",
+      "Flow Packets/s",
+      "Fwd IAT Max",
+      "Fwd IAT Mean",
+      "Fwd IAT Min",
+      "Fwd IAT Std",
+      "Fwd IAT Total",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Std",
+      "Idle Max",
+      "Idle Mean",
+      "Idle Min",
+      "Idle Std",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "PSH Flag Count",
+      "Packet Length Variance",
+      "RST Flag Count",
+      "SYN Flag Count",
+      "Total Bwd Packets",
+      "Total Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Total Length of Fwd Packets",
+      "client_latency",
+      "server_latency"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970059880239521,
+        "recall": 0.999,
+        "f1-score": 0.998001998001998,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8740458015267175,
+        "recall": 0.916,
+        "f1-score": 0.89453125,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9393939393939394,
+        "recall": 0.899,
+        "f1-score": 0.9187531936637711,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9447791164658634,
+        "recall": 0.941,
+        "f1-score": 0.9428857715430861,
+        "support": 1000
+      },
+      "accuracy": 0.9504,
+      "macro avg": {
+        "precision": 0.9510449690820945,
+        "recall": 0.9503999999999999,
+        "f1-score": 0.9505339919657569,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9510449690820946,
+        "recall": 0.9504,
+        "f1-score": 0.950533991965757,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 5,
+    "view": "as",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.20682275697605998,
+      "0.25": 0.20682275697605998,
+      "0.5": 0.20682275697605998,
+      "0.75": 0.20682275697605998,
+      "1.0": 0.20682275697605998
+    },
+    "selected_weight": 0.0,
+    "selected_hierarchy_features": [
+      "http_req_has_cookie",
+      "http_req_has_lang",
+      "http_req_has_referer",
+      "http_req_header_count",
+      "http_req_version",
+      "tls_client_alpn_info",
+      "tls_client_cipher_count",
+      "tls_client_ptype",
+      "tls_client_sni_presence",
+      "tls_client_version",
+      "tls_server_alpn_info",
+      "tls_server_cipher_val",
+      "tls_server_ptype",
+      "tls_server_version"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.444,
+        "f1-score": 0.6149584487534626,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.21949078138718173,
+        "recall": 1.0,
+        "f1-score": 0.35997120230381563,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "accuracy": 0.2888,
+      "macro avg": {
+        "precision": 0.24389815627743636,
+        "recall": 0.2888,
+        "f1-score": 0.19498593021145566,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.24389815627743633,
+        "recall": 0.2888,
+        "f1-score": 0.19498593021145563,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 6,
+    "view": "full",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.9393625496862009,
+      "0.25": 0.9440573487165638,
+      "0.5": 0.9464737141772062,
+      "0.75": 0.9468853068703339,
+      "1.0": 0.9488943580695397
+    },
+    "selected_weight": 1.0,
+    "selected_hierarchy_features": [
+      "ACK Flag Count",
+      "Active Max",
+      "Active Mean",
+      "Active Min",
+      "Active Std",
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "Bwd IAT Max",
+      "Bwd IAT Mean",
+      "Bwd IAT Min",
+      "Bwd IAT Std",
+      "Bwd IAT Total",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Std",
+      "Down/Up Ratio",
+      "FIN Flag Count",
+      "Flow Bytes/s",
+      "Flow Duration",
+      "Flow IAT Max",
+      "Flow IAT Mean",
+      "Flow IAT Min",
+      "Flow IAT Std",
+      "Flow Packets/s",
+      "Fwd IAT Max",
+      "Fwd IAT Mean",
+      "Fwd IAT Min",
+      "Fwd IAT Std",
+      "Fwd IAT Total",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Std",
+      "Idle Max",
+      "Idle Mean",
+      "Idle Min",
+      "Idle Std",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "PSH Flag Count",
+      "Packet Length Variance",
+      "RST Flag Count",
+      "SYN Flag Count",
+      "Total Bwd Packets",
+      "Total Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Total Length of Fwd Packets",
+      "client_latency",
+      "http_req_has_cookie",
+      "http_req_has_lang",
+      "http_req_has_referer",
+      "http_req_version",
+      "server_latency",
+      "tls_client_alpn_info",
+      "tls_client_cipher_count",
+      "tls_client_ptype",
+      "tls_client_sni_presence",
+      "tls_client_version",
+      "tls_server_alpn_info",
+      "tls_server_cipher_val",
+      "tls_server_ptype",
+      "tls_server_version"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970089730807578,
+        "recall": 1.0,
+        "f1-score": 0.9985022466300548,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8732125834127741,
+        "recall": 0.916,
+        "f1-score": 0.8940946803318692,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9403141361256544,
+        "recall": 0.898,
+        "f1-score": 0.9186700767263427,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9457831325301205,
+        "recall": 0.942,
+        "f1-score": 0.9438877755511021,
+        "support": 1000
+      },
+      "accuracy": 0.9506,
+      "macro avg": {
+        "precision": 0.9512637650298614,
+        "recall": 0.9506,
+        "f1-score": 0.9507305051718598,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9512637650298613,
+        "recall": 0.9506,
+        "f1-score": 0.9507305051718599,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 6,
+    "view": "full",
+    "use_jsd": false,
+    "validation_f1_by_weight": {
+      "0.0": 0.9349357072828985,
+      "0.25": 0.9401337644393069,
+      "0.5": 0.9468585404545395,
+      "0.75": 0.9481101100781141,
+      "1.0": 0.9488943580695397
+    },
+    "selected_weight": 1.0,
+    "selected_hierarchy_features": [
+      "Total Fwd Packets",
+      "Total Bwd Packets",
+      "Total Length of Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Std",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Std",
+      "Packet Length Variance",
+      "FIN Flag Count",
+      "SYN Flag Count",
+      "RST Flag Count",
+      "PSH Flag Count",
+      "ACK Flag Count",
+      "Down/Up Ratio",
+      "Average Packet Size",
+      "Avg Fwd Segment Size",
+      "Avg Bwd Segment Size",
+      "Init_Win_bytes_forward",
+      "Init_Win_bytes_backward",
+      "Flow Duration",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Total",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Total",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min",
+      "client_latency",
+      "server_latency",
+      "http_method",
+      "http_path_len",
+      "http_req_method_short",
+      "http_req_version",
+      "http_req_has_cookie",
+      "http_req_has_referer",
+      "http_req_header_count",
+      "http_req_has_lang",
+      "tls_client_ptype",
+      "tls_client_version",
+      "tls_client_sni_presence",
+      "tls_client_cipher_count",
+      "tls_client_extension_count",
+      "tls_client_alpn_info",
+      "tls_server_ptype",
+      "tls_server_version",
+      "tls_server_cipher_val",
+      "tls_server_extension_count",
+      "tls_server_alpn_info"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970089730807578,
+        "recall": 1.0,
+        "f1-score": 0.9985022466300548,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8732125834127741,
+        "recall": 0.916,
+        "f1-score": 0.8940946803318692,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9403141361256544,
+        "recall": 0.898,
+        "f1-score": 0.9186700767263427,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9457831325301205,
+        "recall": 0.942,
+        "f1-score": 0.9438877755511021,
+        "support": 1000
+      },
+      "accuracy": 0.9506,
+      "macro avg": {
+        "precision": 0.9512637650298614,
+        "recall": 0.9506,
+        "f1-score": 0.9507305051718598,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9512637650298613,
+        "recall": 0.9506,
+        "f1-score": 0.9507305051718599,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 6,
+    "view": "pt",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.9417211885138922,
+      "0.25": 0.946475713910587,
+      "0.5": 0.9476722333397216,
+      "0.75": 0.9477618382205704,
+      "1.0": 0.9489674367685866
+    },
+    "selected_weight": 1.0,
+    "selected_hierarchy_features": [
+      "ACK Flag Count",
+      "Active Max",
+      "Active Mean",
+      "Active Min",
+      "Active Std",
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "Bwd IAT Max",
+      "Bwd IAT Mean",
+      "Bwd IAT Min",
+      "Bwd IAT Std",
+      "Bwd IAT Total",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Std",
+      "Down/Up Ratio",
+      "FIN Flag Count",
+      "Flow Bytes/s",
+      "Flow Duration",
+      "Flow IAT Max",
+      "Flow IAT Mean",
+      "Flow IAT Min",
+      "Flow IAT Std",
+      "Flow Packets/s",
+      "Fwd IAT Max",
+      "Fwd IAT Mean",
+      "Fwd IAT Min",
+      "Fwd IAT Std",
+      "Fwd IAT Total",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Std",
+      "Idle Max",
+      "Idle Mean",
+      "Idle Min",
+      "Idle Std",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "PSH Flag Count",
+      "Packet Length Variance",
+      "RST Flag Count",
+      "SYN Flag Count",
+      "Total Bwd Packets",
+      "Total Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Total Length of Fwd Packets",
+      "client_latency",
+      "server_latency"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970089730807578,
+        "recall": 1.0,
+        "f1-score": 0.9985022466300548,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8770413064361191,
+        "recall": 0.913,
+        "f1-score": 0.8946594806467418,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9392670157068063,
+        "recall": 0.897,
+        "f1-score": 0.9176470588235294,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9412350597609562,
+        "recall": 0.945,
+        "f1-score": 0.9431137724550898,
+        "support": 1000
+      },
+      "accuracy": 0.9504,
+      "macro avg": {
+        "precision": 0.9509104709969278,
+        "recall": 0.9504000000000001,
+        "f1-score": 0.9504840610350691,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9509104709969278,
+        "recall": 0.9504,
+        "f1-score": 0.9504840610350691,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 6,
+    "view": "as",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.20682275697605998,
+      "0.25": 0.20682275697605998,
+      "0.5": 0.20682275697605998,
+      "0.75": 0.20682275697605998,
+      "1.0": 0.20682275697605998
+    },
+    "selected_weight": 0.0,
+    "selected_hierarchy_features": [
+      "http_req_has_cookie",
+      "http_req_has_lang",
+      "http_req_has_referer",
+      "http_req_header_count",
+      "http_req_version",
+      "tls_client_alpn_info",
+      "tls_client_cipher_count",
+      "tls_client_ptype",
+      "tls_client_sni_presence",
+      "tls_client_version",
+      "tls_server_alpn_info",
+      "tls_server_cipher_val",
+      "tls_server_ptype",
+      "tls_server_version"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.444,
+        "f1-score": 0.6149584487534626,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.21949078138718173,
+        "recall": 1.0,
+        "f1-score": 0.35997120230381563,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "accuracy": 0.2888,
+      "macro avg": {
+        "precision": 0.24389815627743636,
+        "recall": 0.2888,
+        "f1-score": 0.19498593021145566,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.24389815627743633,
+        "recall": 0.2888,
+        "f1-score": 0.19498593021145563,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 7,
+    "view": "full",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.9397772286054353,
+      "0.25": 0.9425875209576144,
+      "0.5": 0.9473558491902592,
+      "0.75": 0.9473166774821544,
+      "1.0": 0.9476876157365883
+    },
+    "selected_weight": 1.0,
+    "selected_hierarchy_features": [
+      "ACK Flag Count",
+      "Active Max",
+      "Active Mean",
+      "Active Min",
+      "Active Std",
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "Bwd IAT Max",
+      "Bwd IAT Mean",
+      "Bwd IAT Min",
+      "Bwd IAT Std",
+      "Bwd IAT Total",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Std",
+      "Down/Up Ratio",
+      "FIN Flag Count",
+      "Flow Bytes/s",
+      "Flow Duration",
+      "Flow IAT Max",
+      "Flow IAT Mean",
+      "Flow IAT Min",
+      "Flow IAT Std",
+      "Flow Packets/s",
+      "Fwd IAT Max",
+      "Fwd IAT Mean",
+      "Fwd IAT Min",
+      "Fwd IAT Std",
+      "Fwd IAT Total",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Std",
+      "Idle Max",
+      "Idle Mean",
+      "Idle Min",
+      "Idle Std",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "PSH Flag Count",
+      "Packet Length Variance",
+      "RST Flag Count",
+      "SYN Flag Count",
+      "Total Bwd Packets",
+      "Total Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Total Length of Fwd Packets",
+      "client_latency",
+      "http_req_has_cookie",
+      "http_req_has_lang",
+      "http_req_has_referer",
+      "http_req_version",
+      "server_latency",
+      "tls_client_alpn_info",
+      "tls_client_cipher_count",
+      "tls_client_ptype",
+      "tls_client_sni_presence",
+      "tls_client_version",
+      "tls_server_alpn_info",
+      "tls_server_cipher_val",
+      "tls_server_ptype",
+      "tls_server_version"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970089730807578,
+        "recall": 1.0,
+        "f1-score": 0.9985022466300548,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8752380952380953,
+        "recall": 0.919,
+        "f1-score": 0.8965853658536587,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9381551362683438,
+        "recall": 0.895,
+        "f1-score": 0.9160696008188332,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9427710843373494,
+        "recall": 0.939,
+        "f1-score": 0.9408817635270541,
+        "support": 1000
+      },
+      "accuracy": 0.95,
+      "macro avg": {
+        "precision": 0.9506346577849092,
+        "recall": 0.95,
+        "f1-score": 0.9501073446899062,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9506346577849094,
+        "recall": 0.95,
+        "f1-score": 0.9501073446899063,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 7,
+    "view": "full",
+    "use_jsd": false,
+    "validation_f1_by_weight": {
+      "0.0": 0.9349927042268789,
+      "0.25": 0.9422298255646838,
+      "0.5": 0.9465422000987488,
+      "0.75": 0.9473370658356102,
+      "1.0": 0.9476876157365883
+    },
+    "selected_weight": 1.0,
+    "selected_hierarchy_features": [
+      "Total Fwd Packets",
+      "Total Bwd Packets",
+      "Total Length of Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Std",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Std",
+      "Packet Length Variance",
+      "FIN Flag Count",
+      "SYN Flag Count",
+      "RST Flag Count",
+      "PSH Flag Count",
+      "ACK Flag Count",
+      "Down/Up Ratio",
+      "Average Packet Size",
+      "Avg Fwd Segment Size",
+      "Avg Bwd Segment Size",
+      "Init_Win_bytes_forward",
+      "Init_Win_bytes_backward",
+      "Flow Duration",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Total",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Total",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min",
+      "client_latency",
+      "server_latency",
+      "http_method",
+      "http_path_len",
+      "http_req_method_short",
+      "http_req_version",
+      "http_req_has_cookie",
+      "http_req_has_referer",
+      "http_req_header_count",
+      "http_req_has_lang",
+      "tls_client_ptype",
+      "tls_client_version",
+      "tls_client_sni_presence",
+      "tls_client_cipher_count",
+      "tls_client_extension_count",
+      "tls_client_alpn_info",
+      "tls_server_ptype",
+      "tls_server_version",
+      "tls_server_cipher_val",
+      "tls_server_extension_count",
+      "tls_server_alpn_info"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970089730807578,
+        "recall": 1.0,
+        "f1-score": 0.9985022466300548,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8752380952380953,
+        "recall": 0.919,
+        "f1-score": 0.8965853658536587,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9381551362683438,
+        "recall": 0.895,
+        "f1-score": 0.9160696008188332,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9427710843373494,
+        "recall": 0.939,
+        "f1-score": 0.9408817635270541,
+        "support": 1000
+      },
+      "accuracy": 0.95,
+      "macro avg": {
+        "precision": 0.9506346577849092,
+        "recall": 0.95,
+        "f1-score": 0.9501073446899062,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9506346577849094,
+        "recall": 0.95,
+        "f1-score": 0.9501073446899063,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 7,
+    "view": "pt",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.9400961689959043,
+      "0.25": 0.9445148794591418,
+      "0.5": 0.9484776426671793,
+      "0.75": 0.9469186506578822,
+      "1.0": 0.9481341358749715
+    },
+    "selected_weight": 0.5,
+    "selected_hierarchy_features": [
+      "ACK Flag Count",
+      "Active Max",
+      "Active Mean",
+      "Active Min",
+      "Active Std",
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "Bwd IAT Max",
+      "Bwd IAT Mean",
+      "Bwd IAT Min",
+      "Bwd IAT Std",
+      "Bwd IAT Total",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Std",
+      "Down/Up Ratio",
+      "FIN Flag Count",
+      "Flow Bytes/s",
+      "Flow Duration",
+      "Flow IAT Max",
+      "Flow IAT Mean",
+      "Flow IAT Min",
+      "Flow IAT Std",
+      "Flow Packets/s",
+      "Fwd IAT Max",
+      "Fwd IAT Mean",
+      "Fwd IAT Min",
+      "Fwd IAT Std",
+      "Fwd IAT Total",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Std",
+      "Idle Max",
+      "Idle Mean",
+      "Idle Min",
+      "Idle Std",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "PSH Flag Count",
+      "Packet Length Variance",
+      "RST Flag Count",
+      "SYN Flag Count",
+      "Total Bwd Packets",
+      "Total Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Total Length of Fwd Packets",
+      "client_latency",
+      "server_latency"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.998,
+        "f1-score": 0.998998998998999,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9950248756218906,
+        "recall": 1.0,
+        "f1-score": 0.9975062344139651,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8733075435203095,
+        "recall": 0.903,
+        "f1-score": 0.8879056047197641,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9363256784968684,
+        "recall": 0.897,
+        "f1-score": 0.9162410623084781,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9353233830845771,
+        "recall": 0.94,
+        "f1-score": 0.9376558603491272,
+        "support": 1000
+      },
+      "accuracy": 0.9476,
+      "macro avg": {
+        "precision": 0.947996296144729,
+        "recall": 0.9475999999999999,
+        "f1-score": 0.9476615521580667,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9479962961447292,
+        "recall": 0.9476,
+        "f1-score": 0.9476615521580668,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 7,
+    "view": "as",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.20682275697605998,
+      "0.25": 0.20682275697605998,
+      "0.5": 0.20682275697605998,
+      "0.75": 0.20682275697605998,
+      "1.0": 0.20682275697605998
+    },
+    "selected_weight": 0.0,
+    "selected_hierarchy_features": [
+      "http_req_has_cookie",
+      "http_req_has_lang",
+      "http_req_has_referer",
+      "http_req_header_count",
+      "http_req_version",
+      "tls_client_alpn_info",
+      "tls_client_cipher_count",
+      "tls_client_ptype",
+      "tls_client_sni_presence",
+      "tls_client_version",
+      "tls_server_alpn_info",
+      "tls_server_cipher_val",
+      "tls_server_ptype",
+      "tls_server_version"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.444,
+        "f1-score": 0.6149584487534626,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.21949078138718173,
+        "recall": 1.0,
+        "f1-score": 0.35997120230381563,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "accuracy": 0.2888,
+      "macro avg": {
+        "precision": 0.24389815627743636,
+        "recall": 0.2888,
+        "f1-score": 0.19498593021145566,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.24389815627743633,
+        "recall": 0.2888,
+        "f1-score": 0.19498593021145563,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 8,
+    "view": "full",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.9382130341768165,
+      "0.25": 0.942483464520171,
+      "0.5": 0.9473302950769333,
+      "0.75": 0.9481583143345682,
+      "1.0": 0.9505614219037737
+    },
+    "selected_weight": 1.0,
+    "selected_hierarchy_features": [
+      "ACK Flag Count",
+      "Active Max",
+      "Active Mean",
+      "Active Min",
+      "Active Std",
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "Bwd IAT Max",
+      "Bwd IAT Mean",
+      "Bwd IAT Min",
+      "Bwd IAT Std",
+      "Bwd IAT Total",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Std",
+      "Down/Up Ratio",
+      "FIN Flag Count",
+      "Flow Bytes/s",
+      "Flow Duration",
+      "Flow IAT Max",
+      "Flow IAT Mean",
+      "Flow IAT Min",
+      "Flow IAT Std",
+      "Flow Packets/s",
+      "Fwd IAT Max",
+      "Fwd IAT Mean",
+      "Fwd IAT Min",
+      "Fwd IAT Std",
+      "Fwd IAT Total",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Std",
+      "Idle Max",
+      "Idle Mean",
+      "Idle Min",
+      "Idle Std",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "PSH Flag Count",
+      "Packet Length Variance",
+      "RST Flag Count",
+      "SYN Flag Count",
+      "Total Bwd Packets",
+      "Total Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Total Length of Fwd Packets",
+      "client_latency",
+      "http_req_has_cookie",
+      "http_req_has_lang",
+      "http_req_has_referer",
+      "http_req_version",
+      "server_latency",
+      "tls_client_alpn_info",
+      "tls_client_cipher_count",
+      "tls_client_ptype",
+      "tls_client_sni_presence",
+      "tls_client_version",
+      "tls_server_alpn_info",
+      "tls_server_cipher_val",
+      "tls_server_ptype",
+      "tls_server_version"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970059880239521,
+        "recall": 0.999,
+        "f1-score": 0.998001998001998,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8713339640491958,
+        "recall": 0.921,
+        "f1-score": 0.8954788526981041,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9401888772298006,
+        "recall": 0.896,
+        "f1-score": 0.9175627240143368,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9475277497477296,
+        "recall": 0.939,
+        "f1-score": 0.9432446007031642,
+        "support": 1000
+      },
+      "accuracy": 0.9504,
+      "macro avg": {
+        "precision": 0.9512113158101357,
+        "recall": 0.9503999999999999,
+        "f1-score": 0.9505571844075066,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9512113158101357,
+        "recall": 0.9504,
+        "f1-score": 0.9505571844075066,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 8,
+    "view": "full",
+    "use_jsd": false,
+    "validation_f1_by_weight": {
+      "0.0": 0.9377316401094454,
+      "0.25": 0.9425256262743543,
+      "0.5": 0.9469030945026615,
+      "0.75": 0.9477363954657466,
+      "1.0": 0.9505614219037737
+    },
+    "selected_weight": 1.0,
+    "selected_hierarchy_features": [
+      "Total Fwd Packets",
+      "Total Bwd Packets",
+      "Total Length of Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Std",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Std",
+      "Packet Length Variance",
+      "FIN Flag Count",
+      "SYN Flag Count",
+      "RST Flag Count",
+      "PSH Flag Count",
+      "ACK Flag Count",
+      "Down/Up Ratio",
+      "Average Packet Size",
+      "Avg Fwd Segment Size",
+      "Avg Bwd Segment Size",
+      "Init_Win_bytes_forward",
+      "Init_Win_bytes_backward",
+      "Flow Duration",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Total",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Total",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min",
+      "client_latency",
+      "server_latency",
+      "http_method",
+      "http_path_len",
+      "http_req_method_short",
+      "http_req_version",
+      "http_req_has_cookie",
+      "http_req_has_referer",
+      "http_req_header_count",
+      "http_req_has_lang",
+      "tls_client_ptype",
+      "tls_client_version",
+      "tls_client_sni_presence",
+      "tls_client_cipher_count",
+      "tls_client_extension_count",
+      "tls_client_alpn_info",
+      "tls_server_ptype",
+      "tls_server_version",
+      "tls_server_cipher_val",
+      "tls_server_extension_count",
+      "tls_server_alpn_info"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970059880239521,
+        "recall": 0.999,
+        "f1-score": 0.998001998001998,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8713339640491958,
+        "recall": 0.921,
+        "f1-score": 0.8954788526981041,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9401888772298006,
+        "recall": 0.896,
+        "f1-score": 0.9175627240143368,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9475277497477296,
+        "recall": 0.939,
+        "f1-score": 0.9432446007031642,
+        "support": 1000
+      },
+      "accuracy": 0.9504,
+      "macro avg": {
+        "precision": 0.9512113158101357,
+        "recall": 0.9503999999999999,
+        "f1-score": 0.9505571844075066,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9512113158101357,
+        "recall": 0.9504,
+        "f1-score": 0.9505571844075066,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 8,
+    "view": "pt",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.9397214444485433,
+      "0.25": 0.9444641939078808,
+      "0.5": 0.948456481667676,
+      "0.75": 0.9488604671032259,
+      "1.0": 0.9481321487951891
+    },
+    "selected_weight": 0.75,
+    "selected_hierarchy_features": [
+      "ACK Flag Count",
+      "Active Max",
+      "Active Mean",
+      "Active Min",
+      "Active Std",
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "Bwd IAT Max",
+      "Bwd IAT Mean",
+      "Bwd IAT Min",
+      "Bwd IAT Std",
+      "Bwd IAT Total",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Std",
+      "Down/Up Ratio",
+      "FIN Flag Count",
+      "Flow Bytes/s",
+      "Flow Duration",
+      "Flow IAT Max",
+      "Flow IAT Mean",
+      "Flow IAT Min",
+      "Flow IAT Std",
+      "Flow Packets/s",
+      "Fwd IAT Max",
+      "Fwd IAT Mean",
+      "Fwd IAT Min",
+      "Fwd IAT Std",
+      "Fwd IAT Total",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Std",
+      "Idle Max",
+      "Idle Mean",
+      "Idle Min",
+      "Idle Std",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "PSH Flag Count",
+      "Packet Length Variance",
+      "RST Flag Count",
+      "SYN Flag Count",
+      "Total Bwd Packets",
+      "Total Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Total Length of Fwd Packets",
+      "client_latency",
+      "server_latency"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970089730807578,
+        "recall": 1.0,
+        "f1-score": 0.9985022466300548,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8698564593301435,
+        "recall": 0.909,
+        "f1-score": 0.888997555012225,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9390756302521008,
+        "recall": 0.894,
+        "f1-score": 0.9159836065573771,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9391824526420738,
+        "recall": 0.942,
+        "f1-score": 0.9405891163255117,
+        "support": 1000
+      },
+      "accuracy": 0.9484,
+      "macro avg": {
+        "precision": 0.9490247030610153,
+        "recall": 0.9484,
+        "f1-score": 0.9485140542290196,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9490247030610152,
+        "recall": 0.9484,
+        "f1-score": 0.9485140542290197,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 8,
+    "view": "as",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.20682275697605998,
+      "0.25": 0.20682275697605998,
+      "0.5": 0.20682275697605998,
+      "0.75": 0.20682275697605998,
+      "1.0": 0.20682275697605998
+    },
+    "selected_weight": 0.0,
+    "selected_hierarchy_features": [
+      "http_req_has_cookie",
+      "http_req_has_lang",
+      "http_req_has_referer",
+      "http_req_header_count",
+      "http_req_version",
+      "tls_client_alpn_info",
+      "tls_client_cipher_count",
+      "tls_client_ptype",
+      "tls_client_sni_presence",
+      "tls_client_version",
+      "tls_server_alpn_info",
+      "tls_server_cipher_val",
+      "tls_server_ptype",
+      "tls_server_version"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.444,
+        "f1-score": 0.6149584487534626,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.21949078138718173,
+        "recall": 1.0,
+        "f1-score": 0.35997120230381563,
+        "support": 1000
+      },
+      "accuracy": 0.2888,
+      "macro avg": {
+        "precision": 0.24389815627743636,
+        "recall": 0.2888,
+        "f1-score": 0.19498593021145566,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.24389815627743633,
+        "recall": 0.2888,
+        "f1-score": 0.19498593021145563,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 9,
+    "view": "full",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.938119094530989,
+      "0.25": 0.9416944672207526,
+      "0.5": 0.9469898110061603,
+      "0.75": 0.9477377552086038,
+      "1.0": 0.9481067399481169
+    },
+    "selected_weight": 1.0,
+    "selected_hierarchy_features": [
+      "ACK Flag Count",
+      "Active Max",
+      "Active Mean",
+      "Active Min",
+      "Active Std",
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "Bwd IAT Max",
+      "Bwd IAT Mean",
+      "Bwd IAT Min",
+      "Bwd IAT Std",
+      "Bwd IAT Total",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Std",
+      "Down/Up Ratio",
+      "FIN Flag Count",
+      "Flow Bytes/s",
+      "Flow Duration",
+      "Flow IAT Max",
+      "Flow IAT Mean",
+      "Flow IAT Min",
+      "Flow IAT Std",
+      "Flow Packets/s",
+      "Fwd IAT Max",
+      "Fwd IAT Mean",
+      "Fwd IAT Min",
+      "Fwd IAT Std",
+      "Fwd IAT Total",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Std",
+      "Idle Max",
+      "Idle Mean",
+      "Idle Min",
+      "Idle Std",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "PSH Flag Count",
+      "Packet Length Variance",
+      "RST Flag Count",
+      "SYN Flag Count",
+      "Total Bwd Packets",
+      "Total Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Total Length of Fwd Packets",
+      "client_latency",
+      "http_req_has_cookie",
+      "http_req_has_lang",
+      "http_req_has_referer",
+      "http_req_version",
+      "server_latency",
+      "tls_client_alpn_info",
+      "tls_client_cipher_count",
+      "tls_client_ptype",
+      "tls_client_sni_presence",
+      "tls_client_version",
+      "tls_server_alpn_info",
+      "tls_server_cipher_val",
+      "tls_server_ptype",
+      "tls_server_version"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970089730807578,
+        "recall": 1.0,
+        "f1-score": 0.9985022466300548,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8806544754571703,
+        "recall": 0.915,
+        "f1-score": 0.8974987739087789,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9355509355509356,
+        "recall": 0.9,
+        "f1-score": 0.9174311926605505,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.943943943943944,
+        "recall": 0.943,
+        "f1-score": 0.943471735867934,
+        "support": 1000
+      },
+      "accuracy": 0.951,
+      "macro avg": {
+        "precision": 0.9514316656065616,
+        "recall": 0.951,
+        "f1-score": 0.9510803391374496,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9514316656065616,
+        "recall": 0.951,
+        "f1-score": 0.9510803391374497,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 9,
+    "view": "full",
+    "use_jsd": false,
+    "validation_f1_by_weight": {
+      "0.0": 0.9369581686627214,
+      "0.25": 0.9453226667700807,
+      "0.5": 0.9480671582162852,
+      "0.75": 0.9485183413449544,
+      "1.0": 0.9481067399481169
+    },
+    "selected_weight": 0.75,
+    "selected_hierarchy_features": [
+      "Total Fwd Packets",
+      "Total Bwd Packets",
+      "Total Length of Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Std",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Std",
+      "Packet Length Variance",
+      "FIN Flag Count",
+      "SYN Flag Count",
+      "RST Flag Count",
+      "PSH Flag Count",
+      "ACK Flag Count",
+      "Down/Up Ratio",
+      "Average Packet Size",
+      "Avg Fwd Segment Size",
+      "Avg Bwd Segment Size",
+      "Init_Win_bytes_forward",
+      "Init_Win_bytes_backward",
+      "Flow Duration",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Total",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Total",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min",
+      "client_latency",
+      "server_latency",
+      "http_method",
+      "http_path_len",
+      "http_req_method_short",
+      "http_req_version",
+      "http_req_has_cookie",
+      "http_req_has_referer",
+      "http_req_header_count",
+      "http_req_has_lang",
+      "tls_client_ptype",
+      "tls_client_version",
+      "tls_client_sni_presence",
+      "tls_client_cipher_count",
+      "tls_client_extension_count",
+      "tls_client_alpn_info",
+      "tls_server_ptype",
+      "tls_server_version",
+      "tls_server_cipher_val",
+      "tls_server_extension_count",
+      "tls_server_alpn_info"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970089730807578,
+        "recall": 1.0,
+        "f1-score": 0.9985022466300548,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8744007670182167,
+        "recall": 0.912,
+        "f1-score": 0.8928046989720998,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9363920750782064,
+        "recall": 0.898,
+        "f1-score": 0.9167942827973454,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9428857715430862,
+        "recall": 0.941,
+        "f1-score": 0.9419419419419419,
+        "support": 1000
+      },
+      "accuracy": 0.9496,
+      "macro avg": {
+        "precision": 0.9501375173440534,
+        "recall": 0.9496,
+        "f1-score": 0.9497081833922744,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9501375173440534,
+        "recall": 0.9496,
+        "f1-score": 0.9497081833922745,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 9,
+    "view": "pt",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.9373956177601063,
+      "0.25": 0.9445167871426673,
+      "0.5": 0.9477069919547395,
+      "0.75": 0.9481335961589465,
+      "1.0": 0.9476835067456173
+    },
+    "selected_weight": 0.75,
+    "selected_hierarchy_features": [
+      "ACK Flag Count",
+      "Active Max",
+      "Active Mean",
+      "Active Min",
+      "Active Std",
+      "Average Packet Size",
+      "Avg Bwd Segment Size",
+      "Avg Fwd Segment Size",
+      "Bwd IAT Max",
+      "Bwd IAT Mean",
+      "Bwd IAT Min",
+      "Bwd IAT Std",
+      "Bwd IAT Total",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Std",
+      "Down/Up Ratio",
+      "FIN Flag Count",
+      "Flow Bytes/s",
+      "Flow Duration",
+      "Flow IAT Max",
+      "Flow IAT Mean",
+      "Flow IAT Min",
+      "Flow IAT Std",
+      "Flow Packets/s",
+      "Fwd IAT Max",
+      "Fwd IAT Mean",
+      "Fwd IAT Min",
+      "Fwd IAT Std",
+      "Fwd IAT Total",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Std",
+      "Idle Max",
+      "Idle Mean",
+      "Idle Min",
+      "Idle Std",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "PSH Flag Count",
+      "Packet Length Variance",
+      "RST Flag Count",
+      "SYN Flag Count",
+      "Total Bwd Packets",
+      "Total Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Total Length of Fwd Packets",
+      "client_latency",
+      "server_latency"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.997,
+        "f1-score": 0.99849774661993,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.9970089730807578,
+        "recall": 1.0,
+        "f1-score": 0.9985022466300548,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.8717703349282296,
+        "recall": 0.911,
+        "f1-score": 0.8909535452322738,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.9343065693430657,
+        "recall": 0.896,
+        "f1-score": 0.9147524247064829,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.9437751004016064,
+        "recall": 0.94,
+        "f1-score": 0.9418837675350701,
+        "support": 1000
+      },
+      "accuracy": 0.9488,
+      "macro avg": {
+        "precision": 0.949372195550732,
+        "recall": 0.9488,
+        "f1-score": 0.9489179461447623,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.9493721955507319,
+        "recall": 0.9488,
+        "f1-score": 0.9489179461447624,
+        "support": 5000
+      }
+    }
+  },
+  {
+    "seed": 9,
+    "view": "as",
+    "use_jsd": true,
+    "validation_f1_by_weight": {
+      "0.0": 0.20682275697605998,
+      "0.25": 0.20682275697605998,
+      "0.5": 0.20682275697605998,
+      "0.75": 0.20682275697605998,
+      "1.0": 0.20682275697605998
+    },
+    "selected_weight": 0.0,
+    "selected_hierarchy_features": [
+      "http_req_has_cookie",
+      "http_req_has_lang",
+      "http_req_has_referer",
+      "http_req_header_count",
+      "http_req_version",
+      "tls_client_alpn_info",
+      "tls_client_cipher_count",
+      "tls_client_ptype",
+      "tls_client_sni_presence",
+      "tls_client_version",
+      "tls_server_alpn_info",
+      "tls_server_cipher_val",
+      "tls_server_ptype",
+      "tls_server_version"
+    ],
+    "classification_report": {
+      "NonTor": {
+        "precision": 1.0,
+        "recall": 0.444,
+        "f1-score": 0.6149584487534626,
+        "support": 1000
+      },
+      "Tor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-SS": {
+        "precision": 0.21949078138718173,
+        "recall": 1.0,
+        "f1-score": 0.35997120230381563,
+        "support": 1000
+      },
+      "Tor-Trojan": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "Tor-Vmess": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1000
+      },
+      "accuracy": 0.2888,
+      "macro avg": {
+        "precision": 0.24389815627743636,
+        "recall": 0.2888,
+        "f1-score": 0.19498593021145566,
+        "support": 5000
+      },
+      "weighted avg": {
+        "precision": 0.24389815627743633,
+        "recall": 0.2888,
+        "f1-score": 0.19498593021145563,
+        "support": 5000
+      }
+    }
+  }
+]
